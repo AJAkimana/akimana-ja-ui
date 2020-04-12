@@ -16,16 +16,16 @@ export const navs = [
     link: '#resume',
     cssClass: 'file-blank',
   },
-  {
-    name: 'Portfolio',
-    link: '#portfolio',
-    cssClass: 'book-content',
-  },
-  {
-    name: 'Services',
-    link: '#services',
-    cssClass: 'server',
-  },
+  // {
+  //   name: 'Portfolio',
+  //   link: '#portfolio',
+  //   cssClass: 'book-content',
+  // },
+  // {
+  //   name: 'Services',
+  //   link: '#services',
+  //   cssClass: 'server',
+  // },
   {
     name: 'Contact',
     link: '#contact',

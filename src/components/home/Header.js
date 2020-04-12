@@ -1,0 +1,51 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { socials, navs } from '../../utils';
+
+export const Header = () => {
+  return (
+    <header id='header'>
+      <div className='d-flex flex-column'>
+        <div className='profile'>
+          <img
+            src='assets/img/profile-img.jpg'
+            alt=''
+            className='img-fluid rounded-circle'
+          />
+          <h1 className='text-light'>
+            <Link to='#'>Akimana AJA</Link>
+          </h1>
+          <div className='social-links mt-3 text-center'>
+            {socials.map((social, index) => (
+              <Link to='#' className={social.name} key={index}>
+                <i className={`bx bxl-${social.name}`}></i>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <nav className='nav-menu'>
+          <ul>
+            <li className='active'>
+              <Link to='#hero'>
+                <i className='bx bx-home'></i> <span>Home</span>
+              </Link>
+            </li>
+            {navs.map((nav, index) => (
+              <li key={index}>
+                <Link to={nav.link}>
+                  <i className={`bx bx-${nav.cssClass}`}></i>
+                  {nav.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        {/* <!-- .nav-menu --> */}
+        <button type='button' className='mobile-nav-toggle d-xl-none'>
+          <i className='icofont-navigation-menu'></i>
+        </button>
+      </div>
+    </header>
+  );
+};

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Header,
@@ -7,12 +7,16 @@ import {
   SkillsSection,
   ResumeSection,
   ContactSection,
+  ModelLogin,
 } from '../components/home';
 
 const Homepage = () => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <Fragment>
-      <Header />
+      <Header showLogin={handleShow} />
       <HomeSection />
 
       <main id='main'>
@@ -34,6 +38,7 @@ const Homepage = () => {
       <Link to='#' className='back-to-top'>
         <i className='icofont-simple-up'></i>
       </Link>
+      <ModelLogin show={show} onHide={handleClose} />
     </Fragment>
   );
 };

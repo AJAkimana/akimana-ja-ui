@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { socials, navs } from '../../utils';
 
-export const Header = () => {
+export const Header = ({ showLogin }) => {
   return (
     <header id='header'>
       <div className='d-flex flex-column'>
@@ -12,8 +12,8 @@ export const Header = () => {
             alt=''
             className='img-fluid rounded-circle'
           />
-          <h1 className='text-light'>
-            <Link to='#'>Akimana AJA</Link>
+          <h1 className='text-light' onClick={showLogin}>
+            Akimana AJA
           </h1>
           <div className='social-links mt-3 text-center'>
             {socials.map((social, index) => (

@@ -1,9 +1,10 @@
 export const socials = [
-  { name: 'twitter', link: '#' },
-  { name: 'facebook', link: '#' },
-  { name: 'instagram', link: '#' },
-  { name: 'skype', link: '#' },
-  { name: 'linkedin', link: '#' },
+  { name: 'github', link: 'https://github.com/AJAkimana' },
+  { name: 'twitter', link: 'https://twitter.com/AJAkimana' },
+  {
+    name: 'linkedin',
+    link: 'https://linkedin.com/in/akimana-jean-d-amour-8553a167',
+  },
 ];
 export const navs = [
   {

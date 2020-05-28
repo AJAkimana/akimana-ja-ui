@@ -13,6 +13,11 @@ export const navs = [
     cssClass: 'user',
   },
   {
+    name: 'Skills',
+    link: '#skills',
+    cssClass: 'server',
+  },
+  {
     name: 'Resume',
     link: '#resume',
     cssClass: 'file-blank',
@@ -31,5 +36,54 @@ export const navs = [
     name: 'Contact',
     link: '#contact',
     cssClass: 'envelope',
+  },
+];
+export const skills = [
+  {
+    type: 'dbs',
+    subSkills: [
+      {
+        name: 'MySQL',
+        progress: 80,
+      },
+      {
+        name: 'Postgres',
+        progress: 70,
+      },
+      {
+        name: 'Mongo',
+        progress: 80,
+      },
+    ],
+  },
+  {
+    type: 'backends',
+    subSkills: [
+      {
+        name: 'Node/Express',
+        progress: 90,
+      },
+      {
+        name: 'PHP/Lumen',
+        progress: 70,
+      },
+      {
+        name: 'Python/Django',
+        progress: 60,
+      },
+    ],
+  },
+  {
+    type: 'frontends',
+    subSkills: [
+      {
+        name: 'React/Redux',
+        progress: 90,
+      },
+      {
+        name: 'Angular/AngularJS',
+        progress: 50,
+      },
+    ],
   },
 ];

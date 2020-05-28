@@ -1,4 +1,5 @@
 import React from 'react';
+import { skills } from '../../utils';
 
 export const SkillsSection = () => {
   return (
@@ -16,84 +17,30 @@ export const SkillsSection = () => {
         </div>
 
         <div className='row skills-content'>
-          <div className='col-lg-6' data-aos='fade-up'>
-            <div className='progress'>
-              <span className='skill'>
-                HTML <i className='val'>100%</i>
-              </span>
-              <div className='progress-bar-wrap'>
-                <div
-                  className='progress-bar'
-                  role='progressbar'
-                  aria-valuenow='100'
-                  aria-valuemin='0'
-                  aria-valuemax='100'
-                ></div>
-              </div>
+          {skills.map((skill, skillIndex) => (
+            <div
+              className='col-lg-4 col-md-4 col-sm-6'
+              data-aos='fade-up'
+              key={skillIndex}
+            >
+              {skill.subSkills.map((subSkill, subSkillIndex) => (
+                <div className='progress' key={subSkillIndex}>
+                  <span className='skill'>
+                    {subSkill.name} <i className='val'>{subSkill.progress}%</i>
+                  </span>
+                  <div className='progress-bar-wrap'>
+                    <div
+                      className='progress-bar'
+                      role='progressbar'
+                      aria-valuenow={subSkill.progress}
+                      aria-valuemin='0'
+                      aria-valuemax='100'
+                    ></div>
+                  </div>
+                </div>
+              ))}
             </div>
-
-            <div className='progress'>
-              <span className='skill'>
-                Python/Django <i className='val'>60%</i>
-              </span>
-              <div className='progress-bar-wrap'>
-                <div
-                  className='progress-bar'
-                  role='progressbar'
-                  aria-valuenow='60'
-                  aria-valuemin='0'
-                  aria-valuemax='100'
-                ></div>
-              </div>
-            </div>
-
-            <div className='progress'>
-              <span className='skill'>
-                JavaScript <i className='val'>100%</i>
-              </span>
-              <div className='progress-bar-wrap'>
-                <div
-                  className='progress-bar'
-                  role='progressbar'
-                  aria-valuenow='100'
-                  aria-valuemin='0'
-                  aria-valuemax='100'
-                ></div>
-              </div>
-            </div>
-          </div>
-
-          <div className='col-lg-6' data-aos='fade-up' data-aos-delay='100'>
-            <div className='progress'>
-              <span className='skill'>
-                PHP/Lumen <i className='val'>80%</i>
-              </span>
-              <div className='progress-bar-wrap'>
-                <div
-                  className='progress-bar'
-                  role='progressbar'
-                  aria-valuenow='80'
-                  aria-valuemin='0'
-                  aria-valuemax='100'
-                ></div>
-              </div>
-            </div>
-
-            <div className='progress'>
-              <span className='skill'>
-                React/Redux <i className='val'>90%</i>
-              </span>
-              <div className='progress-bar-wrap'>
-                <div
-                  className='progress-bar'
-                  role='progressbar'
-                  aria-valuenow='90'
-                  aria-valuemin='0'
-                  aria-valuemax='100'
-                ></div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

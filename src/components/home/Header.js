@@ -17,9 +17,15 @@ export const Header = ({ showLogin }) => {
           </h1>
           <div className='social-links mt-3 text-center'>
             {socials.map((social, index) => (
-              <Link to='#' className={social.name} key={index}>
+              <a
+                key={index}
+                href={social.link}
+                className={social.name}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
                 <i className={`bx bxl-${social.name}`}></i>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

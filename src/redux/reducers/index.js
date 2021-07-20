@@ -1,4 +1,7 @@
 import { combineReducers } from 'redux';
-import { testReducer } from './testReducer';
+import { CONTACT_ME } from '../actions';
+import { reducer } from '../utils/reducer';
 
-export default combineReducers({ test: testReducer });
+export default combineReducers({
+	contactMe: reducer(CONTACT_ME, 'message', 'string')
+});

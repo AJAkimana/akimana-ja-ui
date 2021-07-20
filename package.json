@@ -31,6 +31,7 @@
     "react-router-config": "^5.1.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^4.0.3",
+    "react-toastify": "^7.0.4",
     "react-typed": "^1.2.0",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",

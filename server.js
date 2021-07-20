@@ -10,6 +10,14 @@ const port = process.env.PORT || 8080;
 const app = express();
 
 app.use(express.static(__dirname + '/build'));
+app.use(
+	express.urlencoded({
+		limit: '1mb',
+		parameterLimit: 100000,
+		extended: false
+	})
+);
+app.use(express.json({ limit: '1mb' }));
 
 appSecurity(app);
 

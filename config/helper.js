@@ -21,7 +21,7 @@ const formatEmail = (user = {}, message) => {
           <tr>
             <td align="left" style="font-family: Arial, sans-serif; font-size: 20px; color: #050505;">
               <p>Dear Sir, you got a new message from:
-              <b>${user.userNames}.</b></p>
+              <b>${user.names}.</b></p>
               <p>Email: <b>${user.email}</b></p>
             </td>
           </tr>
@@ -87,16 +87,18 @@ export const serverResponse = (
 export const validateMessageBody = (reqBody) => {
 	const { names, email, subject } = reqBody;
 	const regex = /^[a-zA-Z]+$/;
-	const regexEmail =
-		/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+	const regexEmail = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi;
 	const validMsg = {
-		names: { invalid: regex.test(names), msg: 'The name seems no to be valid' },
+		names: {
+			invalid: names === '' || regex.test(names),
+			msg: 'The name seems no to be valid'
+		},
 		email: {
-			invalid: regexEmail.test(email),
+			invalid: email === '',
 			msg: 'Please provide a valid email'
 		},
 		subject: {
-			invalid: regex.test(subject),
+			invalid: subject === '',
 			msg: 'The subject is a little bit invalid'
 		}
 	};

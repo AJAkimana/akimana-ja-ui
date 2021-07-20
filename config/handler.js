@@ -15,8 +15,8 @@ export const contactMe = async (req, res) => {
 		const { names, email, subject, message } = req.body;
 
 		await sendEmail(subject, { names, email, message });
-
-		return serverResponse(res, 200, 'The message was sent');
+		const msg = 'The message was sent';
+		return serverResponse(res, 200, msg, msg);
 	} catch (error) {
 		return serverResponse(res, 500, serverMsgs[500]);
 	}

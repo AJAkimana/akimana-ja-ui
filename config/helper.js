@@ -60,7 +60,10 @@ export const sendEmail = async (subject, content) => {
 		html: emailContent,
 		text: `${emailContent}`
 	};
-	await sgMail.send(messageBody);
+	const isProduction = process.env.NODE_ENV === 'production';
+	if (isProduction) {
+		await sgMail.send(messageBody);
+	}
 };
 
 /**

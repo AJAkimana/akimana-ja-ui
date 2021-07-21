@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { sendMessage } from '../../redux/actions/user';
 import { notifier } from '../../utils/notifier';
@@ -11,10 +11,10 @@ const initialState = {
 };
 export const ContactSection = () => {
 	const [messageBody, setMessageBody] = useState(initialState);
-	const { loading, loaded, message } = useSelector(
-		({ contactMe }) => contactMe
-	);
+	const contactMeState = useSelector(({ contactMe }) => contactMe);
+	const { loading, loaded, message } = contactMeState;
 	useEffect(() => {
+		// console.log(contactMeState);
 		if (loaded) {
 			notifier.success(message);
 			setMessageBody(initialState);
@@ -79,8 +79,7 @@ export const ContactSection = () => {
 										type='text'
 										name='names'
 										className='form-control'
-										data-rule='minlen:4'
-										data-msg='Please enter at least 4 chars'
+										value={messageBody.names}
 										onChange={onHandleChange}
 									/>
 									<div className='validate'></div>
@@ -91,8 +90,7 @@ export const ContactSection = () => {
 										type='email'
 										className='form-control'
 										name='email'
-										data-rule='email'
-										data-msg='Please enter a valid email'
+										value={messageBody.email}
 										onChange={onHandleChange}
 									/>
 									<div className='validate'></div>
@@ -104,8 +102,7 @@ export const ContactSection = () => {
 									type='text'
 									className='form-control'
 									name='subject'
-									data-rule='minlen:4'
-									data-msg='Please enter at least 8 chars of subject'
+									value={messageBody.subject}
 									onChange={onHandleChange}
 								/>
 								<div className='validate'></div>
@@ -116,8 +113,7 @@ export const ContactSection = () => {
 									className='form-control'
 									name='message'
 									rows='10'
-									data-rule='required'
-									data-msg='Please write something for us'
+									value={messageBody.message}
 									onChange={onHandleChange}
 								></textarea>
 								<div className='validate'></div>

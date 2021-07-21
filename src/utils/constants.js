@@ -1,11 +1,18 @@
 export const socials = [
 	{ name: 'github', link: 'https://github.com/AJAkimana' },
+	{ name: 'gitlab', link: 'https://gitlab.com/AJAkimana' },
 	{ name: 'twitter', link: 'https://twitter.com/AJAkimana' },
+	{
+		name: 'stack-overflow',
+		link: 'https://stackoverflow.com/users/7079061/akimana-ajoully-jean-damour'
+	},
 	{
 		name: 'linkedin',
 		link: 'https://www.linkedin.com/in/jean-d-amour-akimanizanye-8553a167/'
 	}
 ];
+
+const thisYear = new Date().getFullYear();
 export const navs = [
 	{
 		name: 'About',
@@ -43,15 +50,18 @@ export const skills = [
 		type: 'dbs',
 		subSkills: [
 			{
-				name: 'MySQL',
+				name: 'SQL(MySQL, PostgreSQL)',
+				experience: thisYear - 2016,
 				progress: 80
 			},
 			{
-				name: 'Postgres',
+				name: 'NoSQL(Mongo, Couchbase)',
+				experience: thisYear - 2017,
 				progress: 70
 			},
 			{
-				name: 'Mongo',
+				name: 'Cloud database(Firebase)',
+				experience: thisYear - 2018,
 				progress: 80
 			}
 		]
@@ -60,16 +70,19 @@ export const skills = [
 		type: 'backends',
 		subSkills: [
 			{
-				name: 'Node/Express',
+				name: 'Node',
+				experience: thisYear - 2017,
 				progress: 90
 			},
 			{
-				name: 'PHP/Lumen',
-				progress: 70
+				name: 'Python',
+				experience: thisYear - 2018,
+				progress: 60
 			},
 			{
-				name: 'Python/Django',
-				progress: 60
+				name: 'PHP',
+				experience: thisYear - 2015,
+				progress: 70
 			}
 		]
 	},
@@ -77,11 +90,18 @@ export const skills = [
 		type: 'frontends',
 		subSkills: [
 			{
+				name: 'Vanilla Javascript',
+				experience: thisYear - 2015,
+				progress: 50
+			},
+			{
 				name: 'React/Redux',
+				experience: thisYear - 2018,
 				progress: 90
 			},
 			{
 				name: 'Angular/AngularJS',
+				experience: thisYear - 2017,
 				progress: 50
 			}
 		]

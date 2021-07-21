@@ -10,7 +10,7 @@ export const notifier = {
 	success: (msg) =>
 		toast(msg, {
 			type: toast.TYPE.DEFAULT,
-			position: toast.POSITION.BOTTOM_LEFT,
+			position: toast.POSITION.TOP_RIGHT,
 			toastId: 17
 		})
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import { skills } from "../../utils";
+import { DownloadCV } from "../DownloadCV";
 
 export const SkillsSection = () => {
   return (
@@ -7,6 +8,7 @@ export const SkillsSection = () => {
       <div className="container">
         <div className="section-title">
           <h2>Skills</h2>
+          <DownloadCV />
           <p>
             I'm not bount to any technology. In fact, I choose a technology
             based to the problem at hand. So far, these are the technologies I

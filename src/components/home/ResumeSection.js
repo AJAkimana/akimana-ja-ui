@@ -1,18 +1,19 @@
-import React from 'react';
+import React from "react";
+import { DownloadCV } from "../DownloadCV";
 
 export const ResumeSection = () => {
   return (
-    <section id='resume' className='resume'>
-      <div className='container'>
-        <div className='section-title'>
+    <section id="resume" className="resume">
+      <div className="container">
+        <div className="section-title">
           <h2>Resume</h2>
-          <p>Resume introduction</p>
+          <DownloadCV />
         </div>
 
-        <div className='row'>
-          <div className='col-lg-6' data-aos='fade-up'>
-            <h3 className='resume-title'>Education</h3>
-            <div className='resume-item'>
+        <div className="row">
+          <div className="col-lg-6" data-aos="fade-up">
+            <h3 className="resume-title">Education</h3>
+            <div className="resume-item">
               <h4>Bachelor of Computer Science</h4>
               <h5>2012 - 2016</h5>
               <p>
@@ -27,15 +28,15 @@ export const ResumeSection = () => {
                   (KIST, Kinyarwanda: Ishuri Rikuru ry'Ubumenyi n'Ikoranabuhanga
                   rya Kigali, French: Institut des Sciences et des Technologies
                   de Kigali)
-                </i>{' '}
+                </i>{" "}
                 in Kigali, Rwanda is the first technology-focused institution of
                 higher education to be created by the Rwanda government.
               </p>
             </div>
           </div>
-          <div className='col-lg-6' data-aos='fade-up' data-aos-delay='100'>
-            <h3 className='resume-title'>Professional Experience</h3>
-            <div className='resume-item'>
+          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 className="resume-title">Professional Experience</h3>
+            <div className="resume-item">
               <h4>Software developer</h4>
               <h5>2016 - 2018</h5>
               <p>
@@ -53,7 +54,7 @@ export const ResumeSection = () => {
                 <li>Wrote code on eShuri platform using Node/Express.</li>
               </ul>
             </div>
-            <div className='resume-item'>
+            <div className="resume-item">
               <h4>Associate Software Engineer</h4>
               <h5>2019 - 2020</h5>
               <p>

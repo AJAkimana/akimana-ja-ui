@@ -1,4 +1,5 @@
 import React from "react";
+import { DownloadCV } from "../DownloadCV";
 
 export const AboutSection = () => {
   return (
@@ -6,6 +7,7 @@ export const AboutSection = () => {
       <div className="container">
         <div className="section-title">
           <h2>About</h2>
+          <DownloadCV />
           <p>
             I am a software engineer who loves playing with a computer to create
             solutions to real-world problems. I hold a Bachelor's degree in

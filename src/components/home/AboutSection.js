@@ -1,73 +1,77 @@
-import React from 'react';
+import React from "react";
 
 export const AboutSection = () => {
   return (
-    <section id='about' className='about'>
-      <div className='container'>
-        <div className='section-title'>
+    <section id="about" className="about">
+      <div className="container">
+        <div className="section-title">
           <h2>About</h2>
           <p>
-            I am a software developer who loves playing with a computer to
-            create solutions to real problems. I hold a Bachelor's degree in
-            Computer Science from University of Rwanda. With years of experience
-            in software development
+            I am a software engineer who loves playing with a computer to create
+            solutions to real-world problems. I hold a Bachelor's degree in
+            Computer Science from University of Rwanda.
+          </p>
+          <p>
+            I help teams produce exceptional products by offering in-depth
+            quality assurance support. Open and clear communicator with good
+            multitasking skills, organized nature and strong attention to detail
           </p>
         </div>
 
-        <div className='row'>
-          <div className='col-lg-4' data-aos='fade-right'>
+        <div className="row">
+          <div className="col-lg-4" data-aos="fade-right">
             <img
-              src='assets/img/profile-img.jpg'
-              className='img-fluid'
-              alt=''
+              src="assets/img/profile-img.jpg"
+              className="img-fluid"
+              alt=""
             />
           </div>
-          <div className='col-lg-8 pt-4 pt-lg-0 content' data-aos='fade-left'>
+          <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3>Full stack developer.</h3>
-            <p className='font-italic'>
+            <p className="font-italic">
               <b>Learning::::Working.</b>Learning is an endless work, none on
               earth has ever gotten on a limit of knowledge. What I know today
               will become what I knew tomorrow and if it is not improved, it
               might not be helping in tomorrow's situation. That’s why we need
               to plan on how to improve our knowledge on a daily basis.
             </p>
-            <div className='row'>
-              <div className='col-lg-6'>
+            <div className="row">
+              <div className="col-lg-6">
                 <ul>
-                  <li>
+                  {/* <li>
                     <i className='icofont-rounded-right'></i>{' '}
                     <strong>Birthday:</strong> November 17, 1992
-                  </li>
+                  </li> */}
                   <li>
-                    <i className='icofont-rounded-right'></i>{' '}
+                    <i className="icofont-rounded-right"></i>{" "}
                     <strong>Website:</strong> www.akimanaja.com
                   </li>
                   <li>
-                    <i className='icofont-rounded-right'></i>{' '}
+                    <i className="icofont-rounded-right"></i>{" "}
                     <strong>Phone:</strong> +250 783543016
                   </li>
                   <li>
-                    <i className='icofont-rounded-right'></i>
+                    <i className="icofont-rounded-right"></i>
                     <strong>City:</strong> Kigali, Rwanda
                   </li>
                 </ul>
               </div>
-              <div className='col-lg-6'>
+              <div className="col-lg-6">
                 <ul>
-                  <li>
+                  {/* <li>
                     <i className='icofont-rounded-right'></i>{' '}
                     <strong>Age:</strong> 28
-                  </li>
+                  </li> */}
                   <li>
-                    <i className='icofont-rounded-right'></i>{' '}
+                    <i className="icofont-rounded-right"></i>{" "}
                     <strong>Degree:</strong> Bachelor
                   </li>
                   <li>
-                    <i className='icofont-rounded-right'></i>{' '}
+                    <i className="icofont-rounded-right"></i>{" "}
                     <strong>Email:</strong> akimanaja17@gmail.com
                   </li>
                   <li>
-                    <i className='icofont-rounded-right'></i>{' '}
+                    <i className="icofont-rounded-right"></i>{" "}
                     <strong>Freelance:</strong> Available
                   </li>
                 </ul>

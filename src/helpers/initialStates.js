@@ -1,3 +1,3 @@
 export const initialTestState = {
-  name: 'test'
+  name: "test",
 };

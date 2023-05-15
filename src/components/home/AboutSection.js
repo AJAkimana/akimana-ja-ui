@@ -1,7 +1,7 @@
 import React from "react";
 import { DownloadCV } from "../DownloadCV";
 
-export const AboutSection = () => {
+export const AboutSection = ({ profile }) => {
   return (
     <section id="about" className="about">
       <div className="container">
@@ -46,15 +46,15 @@ export const AboutSection = () => {
                   </li> */}
                   <li>
                     <i className="icofont-rounded-right"></i>{" "}
-                    <strong>Website:</strong> www.akimanaja.com
+                    <strong>Website:</strong> {profile.website}
                   </li>
                   <li>
                     <i className="icofont-rounded-right"></i>{" "}
-                    <strong>Phone:</strong> +250 783543016
+                    <strong>Phone:</strong> {profile.phoneNumber}
                   </li>
                   <li>
                     <i className="icofont-rounded-right"></i>
-                    <strong>City:</strong> Kigali, Rwanda
+                    <strong>City:</strong> {profile.city}
                   </li>
                 </ul>
               </div>
@@ -66,15 +66,15 @@ export const AboutSection = () => {
                   </li> */}
                   <li>
                     <i className="icofont-rounded-right"></i>{" "}
-                    <strong>Degree:</strong> Bachelor
+                    <strong>Degree:</strong> {profile.degree}
                   </li>
                   <li>
                     <i className="icofont-rounded-right"></i>{" "}
-                    <strong>Email:</strong> akimanaja17@gmail.com
+                    <strong>Email:</strong> {profile.email}
                   </li>
                   <li>
                     <i className="icofont-rounded-right"></i>{" "}
-                    <strong>Freelance:</strong> Available
+                    <strong>Freelance:</strong> {profile.availability}
                   </li>
                 </ul>
               </div>

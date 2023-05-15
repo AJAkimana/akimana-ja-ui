@@ -1,5 +1,5 @@
-import React, { Fragment, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Header,
   HomeSection,
@@ -8,7 +8,8 @@ import {
   ResumeSection,
   ContactSection,
   ModelLogin,
-} from '../components/home';
+} from "../components/home";
+import { data } from "../utils";
 
 const Homepage = () => {
   const [show, setShow] = useState(false);
@@ -19,15 +20,15 @@ const Homepage = () => {
       <Header showLogin={handleShow} />
       <HomeSection />
 
-      <main id='main'>
-        <AboutSection />
-        <SkillsSection />
-        <ResumeSection />
-        <ContactSection />
+      <main id="main">
+        <AboutSection profile={data.profile} />
+        <SkillsSection skills={data.skills} />
+        <ResumeSection resume={data.resume} />
+        <ContactSection profile={data.profile} />
       </main>
-      <footer id='footer'>
-        <div className='container'>
-          <div className='copyright'>
+      <footer id="footer">
+        <div className="container">
+          <div className="copyright">
             &copy; Copyright 2018-{new Date().getFullYear()}/
             <strong>
               <span>AkimanaJA</span>
@@ -35,8 +36,8 @@ const Homepage = () => {
           </div>
         </div>
       </footer>
-      <Link to='#' className='back-to-top'>
-        <i className='icofont-simple-up'></i>
+      <Link to="#" className="back-to-top">
+        <i className="icofont-simple-up"></i>
       </Link>
       <ModelLogin show={show} onHide={handleClose} />
     </Fragment>

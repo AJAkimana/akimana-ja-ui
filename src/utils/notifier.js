@@ -1,16 +1,16 @@
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 export const notifier = {
-	error: (msg) =>
-		toast(msg, {
-			type: toast.TYPE.ERROR,
-			position: toast.POSITION.BOTTOM_RIGHT,
-			toastId: 13
-		}),
-	success: (msg) =>
-		toast(msg, {
-			type: toast.TYPE.DEFAULT,
-			position: toast.POSITION.TOP_RIGHT,
-			toastId: 17
-		})
+  error: (msg) =>
+    toast(msg, {
+      type: toast.TYPE.ERROR,
+      position: toast.POSITION.BOTTOM_RIGHT,
+      toastId: 13,
+    }),
+  success: (msg) =>
+    toast(msg, {
+      type: toast.TYPE.DEFAULT,
+      position: toast.POSITION.TOP_RIGHT,
+      toastId: 17,
+    }),
 };

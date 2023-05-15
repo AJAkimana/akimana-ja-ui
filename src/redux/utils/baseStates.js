@@ -4,7 +4,7 @@
  * @param {object} value Its value
  */
 export const baseState = (key, value) => ({
-	loading: false,
-	loaded: false,
-	[key]: value
+  loading: false,
+  loaded: false,
+  [key]: value,
 });

@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
 
-let token = 'null';
+let token = "null";
 if (localStorage.user) {
   const user = JSON.parse(localStorage.user);
   token = user.token;

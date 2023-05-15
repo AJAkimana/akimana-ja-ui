@@ -1,11 +1,11 @@
-import sgMail from '@sendgrid/mail';
-import { Response } from 'express';
+import sgMail from "@sendgrid/mail";
+import { Response } from "express";
 
 export const serverMsgs = {
-	500: 'Oops, It seems something went wrong please try again'
+  500: "Oops, It seems something went wrong please try again",
 };
 const formatEmail = (user = {}, message) => {
-	return `<body style="margin: 0; padding: 0;">
+  return `<body style="margin: 0; padding: 0;">
   <table border="0" cellpadding="0" cellspacing="0" width="900px"
     style="padding: 0 40px 0 40px; background-color:#f1b2cc;">
     <tr>
@@ -49,21 +49,21 @@ const formatEmail = (user = {}, message) => {
  * @returns
  */
 export const sendEmail = async (subject, content) => {
-	sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-	const { names, email, message } = content;
-	const emailContent = formatEmail({ names, email }, message);
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  const { names, email, message } = content;
+  const emailContent = formatEmail({ names, email }, message);
 
-	const messageBody = {
-		to: `${process.env.CONTACT_EMAIL}`,
-		from: `${process.env.APP_EMAIL}`,
-		subject,
-		html: emailContent,
-		text: `${emailContent}`
-	};
-	const isProduction = process.env.NODE_ENV === 'production';
-	if (isProduction) {
-		await sgMail.send(messageBody);
-	}
+  const messageBody = {
+    to: `${process.env.CONTACT_EMAIL}`,
+    from: `${process.env.APP_EMAIL}`,
+    subject,
+    html: emailContent,
+    text: `${emailContent}`,
+  };
+  const isProduction = process.env.NODE_ENV === "production";
+  if (isProduction) {
+    await sgMail.send(messageBody);
+  }
 };
 
 /**
@@ -75,41 +75,41 @@ export const sendEmail = async (subject, content) => {
  * @returns
  */
 export const serverResponse = (
-	res,
-	statusCode = 200,
-	message = 'Success',
-	data
+  res,
+  statusCode = 200,
+  message = "Success",
+  data
 ) => {
-	const messageType = statusCode >= 400 ? 'error' : 'message';
-	return res.status(statusCode).json({
-		status: statusCode,
-		[messageType]: message,
-		data
-	});
+  const messageType = statusCode >= 400 ? "error" : "message";
+  return res.status(statusCode).json({
+    status: statusCode,
+    [messageType]: message,
+    data,
+  });
 };
 export const validateMessageBody = (reqBody) => {
-	const { names, email, subject } = reqBody;
-	const regex = /^[a-zA-Z]+$/;
-	const regexEmail = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi;
-	const validMsg = {
-		names: {
-			invalid: names === '' || regex.test(names),
-			msg: 'The name seems no to be valid'
-		},
-		email: {
-			invalid: email === '',
-			msg: 'Please provide a valid email'
-		},
-		subject: {
-			invalid: subject === '',
-			msg: 'The subject is a little bit invalid'
-		}
-	};
-	let errors = [];
-	for (const obj in validMsg) {
-		if (validMsg[obj].invalid) {
-			errors.push(validMsg[obj].msg);
-		}
-	}
-	return errors;
+  const { names, email, subject } = reqBody;
+  const regex = /^[a-zA-Z]+$/;
+  const regexEmail = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi;
+  const validMsg = {
+    names: {
+      invalid: names === "" || regex.test(names),
+      msg: "The name seems no to be valid",
+    },
+    email: {
+      invalid: email === "",
+      msg: "Please provide a valid email",
+    },
+    subject: {
+      invalid: subject === "",
+      msg: "The subject is a little bit invalid",
+    },
+  };
+  let errors = [];
+  for (const obj in validMsg) {
+    if (validMsg[obj].invalid) {
+      errors.push(validMsg[obj].msg);
+    }
+  }
+  return errors;
 };

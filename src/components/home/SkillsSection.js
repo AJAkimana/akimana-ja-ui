@@ -1,8 +1,7 @@
 import React from "react";
-import { skills } from "../../utils";
 import { DownloadCV } from "../DownloadCV";
 
-export const SkillsSection = () => {
+export const SkillsSection = ({ skills }) => {
   return (
     <section id="skills" className="skills section-bg">
       <div className="container">

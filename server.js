@@ -2,7 +2,7 @@ import express from "express";
 import path from "path";
 import dotenv from "dotenv";
 import { appSecurity } from "./config/security";
-import { contactMe } from "./config/handler";
+import { contactMe, getMyInfo } from "./config/handler";
 
 dotenv.config();
 
@@ -22,6 +22,7 @@ app.use(express.json({ limit: "1mb" }));
 appSecurity(app);
 
 app.post("/api/contact-me", contactMe);
+app.get("/api/get-my-info", getMyInfo);
 app.use("/api/cv", express.static("./res"));
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname + "/build", "index.html"));

@@ -1,8 +1,8 @@
 import express from "express";
 import path from "path";
 import dotenv from "dotenv";
-import { appSecurity } from "./config/security";
-import { contactMe, getMyInfo } from "./config/handler";
+import { appSecurity } from "./server/security";
+import { contactMe, getMyInfo } from "./server/handler";
 
 dotenv.config();
 

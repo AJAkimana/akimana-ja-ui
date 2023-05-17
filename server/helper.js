@@ -1,5 +1,5 @@
 import sgMail from "@sendgrid/mail";
-import { Response } from "express";
+import { readFileSync } from "fs";
 
 export const serverMsgs = {
   500: "Oops, It seems something went wrong please try again",
@@ -90,7 +90,7 @@ export const serverResponse = (
 export const validateMessageBody = (reqBody) => {
   const { names, email, subject } = reqBody;
   const regex = /^[a-zA-Z]+$/;
-  const regexEmail = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi;
+  // const regexEmail = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi;
   const validMsg = {
     names: {
       invalid: names === "" || regex.test(names),
@@ -112,4 +112,9 @@ export const validateMessageBody = (reqBody) => {
     }
   }
   return errors;
+};
+
+export const dataToJson = () => {
+  const jsonData = readFileSync(`${__dirname}/../config/data/myInfo.json`);
+  return JSON.parse(jsonData);
 };

@@ -1,17 +1,17 @@
 import { pending, fulfilled, rejected } from "./actions";
 import { baseState } from "./baseStates";
 
-const stateType = (type = "string") => {
+const stateType = (type = "string", initialState) => {
   const types = {
-    string: "",
-    object: {},
-    array: [],
+    string: initialState || "",
+    object: initialState || {},
+    array: initialState || [],
   };
   return types[type];
 };
 export const reducer =
-  (actionType = "ACTION_TYPE", defaultState = "state", dataType = "string") =>
-  (state = baseState(defaultState, stateType(dataType)), action) => {
+  (actionType = "ACTION_TYPE", key = "state", dataType = "string", initial) =>
+  (state = baseState(key, stateType(dataType, initial)), action) => {
     switch (action.type) {
       case pending(actionType): {
         return {
@@ -25,7 +25,7 @@ export const reducer =
           ...state,
           loading: false,
           loaded: true,
-          [defaultState]: action.payload.data.data,
+          [key]: action.payload.data.data,
         };
       }
       case rejected(actionType):

@@ -27,15 +27,15 @@ export const contactMe = async (req, res) => {
 export const getMyInfo = async (req, res) => {
   try {
     let data = dataToJson();
-    const thisYear = new Date().getFullYear();
-    const skills = data.skills.map((skill) => ({
-      ...skill,
-      subSkills: skill.subSkills.map((subSkill) => ({
-        ...subSkill,
-        experience: thisYear - subSkill.experience,
-      })),
-    }));
-    data = { ...data, skills };
+    // const thisYear = new Date().getFullYear();
+    // const skills = data.skills.map((skill) => ({
+    //   ...skill,
+    //   subSkills: skill.subSkills.map((subSkill) => ({
+    //     ...subSkill,
+    //     experience: thisYear - subSkill.experience,
+    //   })),
+    // }));
+    // data = { ...data, skills };
     return serverResponse(res, 200, "Success", data);
   } catch (error) {
     return serverResponse(res, 500, serverMsgs[500]);

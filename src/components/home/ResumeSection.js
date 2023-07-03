@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 import { DownloadCV } from "../DownloadCV";
 
 export const ResumeSection = ({ resume = [] }) => {
@@ -18,8 +19,8 @@ export const ResumeSection = ({ resume = [] }) => {
                 <div className="resume-item" key={cont.role}>
                   <h4>{cont.role}</h4>
                   <h5>
-                    {new Date(cont.startDate).getFullYear()} -{" "}
-                    {new Date(cont.startDate).getFullYear()}
+                    {moment(cont.startDate).format("YYYY")} -{" "}
+                    {moment(cont.endDate || undefined).format("YYYY")}
                   </h5>
                   <p>
                     <em>{cont.entity.name}</em>

@@ -1,4 +1,5 @@
 import React from "react";
+import { toProgess } from "../../helpers/utils";
 import { DownloadCV } from "../DownloadCV";
 
 export const SkillsSection = ({ skills }) => {
@@ -26,13 +27,14 @@ export const SkillsSection = ({ skills }) => {
                 <div className="progress" key={subSkillIndex}>
                   <span className="skill">
                     {subSkill.name}{" "}
-                    <i className="val">{subSkill.experience} years</i>
+                    <i className="val">Since {subSkill.experience}</i>
                   </span>
                   <div className="progress-bar-wrap">
                     <div
                       className="progress-bar"
+                      style={{ width: `${toProgess(subSkill.experience)}px` }}
                       role="progressbar"
-                      aria-valuenow={subSkill.progress}
+                      aria-valuenow="45"
                       aria-valuemin="10"
                       aria-valuemax="100"
                     ></div>

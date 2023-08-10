@@ -1,3 +1,4 @@
+import { generateCv } from "./cv/cvGenerator";
 import {
   dataToJson,
   sendEmail,
@@ -26,18 +27,19 @@ export const contactMe = async (req, res) => {
 
 export const getMyInfo = async (req, res) => {
   try {
-    let data = dataToJson();
-    // const thisYear = new Date().getFullYear();
-    // const skills = data.skills.map((skill) => ({
-    //   ...skill,
-    //   subSkills: skill.subSkills.map((subSkill) => ({
-    //     ...subSkill,
-    //     experience: thisYear - subSkill.experience,
-    //   })),
-    // }));
-    // data = { ...data, skills };
+    const data = dataToJson();
     return serverResponse(res, 200, "Success", data);
   } catch (error) {
+    return serverResponse(res, 500, serverMsgs[500]);
+  }
+};
+
+export const downloadCv = async (req, res) => {
+  try {
+    await generateCv();
+    return serverResponse(res, 200, "Success");
+  } catch (error) {
+    console.log(error);
     return serverResponse(res, 500, serverMsgs[500]);
   }
 };

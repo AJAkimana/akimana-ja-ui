@@ -2,7 +2,7 @@ import express from "express";
 import path from "path";
 import dotenv from "dotenv";
 import { appSecurity } from "./server/security";
-import { contactMe, getMyInfo } from "./server/handler";
+import { contactMe, downloadCv, getMyInfo } from "./server/handler";
 
 dotenv.config();
 
@@ -23,6 +23,7 @@ appSecurity(app);
 
 app.post("/api/contact-me", contactMe);
 app.get("/api/get-my-info", getMyInfo);
+app.get("/api/download-my-cv", downloadCv);
 app.use("/api/cv", express.static("./res"));
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname + "/build", "index.html"));

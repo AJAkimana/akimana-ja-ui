@@ -10,73 +10,96 @@
     "email": "akimanaja17@gmail.com",
     "availability": "Available"
   },
-  "skills": [
-    {
-      "type": "dbs",
-      "subSkills": [
+  "aboutMe": "A passion driven, results-oriented, high-performance individual with over 5 years of professional experience in software engineering, in different programming languages and frameworks, having a drive to create and manage innovative software solutions and a successful track record of accomplishments.",
+  "skills": {
+    "techSkills": {
+      "summary": [
+        "Javascript",
+        "Python",
+        "PHP",
+        "No/SQL Databases",
+        "Testing",
+        "Figma"
+      ],
+      "detailed": [
         {
-          "name": "SQL(MySQL, PostgreSQL)",
-          "experience": 2016,
-          "progress": 80
+          "type": "dbs",
+          "subSkills": [
+            {
+              "name": "SQL(MySQL, PostgreSQL)",
+              "experience": 2016,
+              "progress": 80
+            },
+            {
+              "name": "NoSQL(Mongo, Couchbase)",
+              "experience": 2017,
+              "progress": 70
+            },
+            {
+              "name": "Cloud database(Firebase)",
+              "experience": 2018,
+              "progress": 80
+            }
+          ]
         },
         {
-          "name": "NoSQL(Mongo, Couchbase)",
-          "experience": 2017,
-          "progress": 70
+          "type": "backends",
+          "subSkills": [
+            {
+              "name": "Node",
+              "experience": 2017,
+              "progress": 90
+            },
+            {
+              "name": "Python",
+              "experience": 2018,
+              "progress": 60
+            },
+            {
+              "name": "PHP",
+              "experience": 2015,
+              "progress": 70
+            }
+          ]
         },
         {
-          "name": "Cloud database(Firebase)",
-          "experience": 2018,
-          "progress": 80
+          "type": "frontends",
+          "subSkills": [
+            {
+              "name": "Vanilla Javascript",
+              "experience": 2015,
+              "progress": 50
+            },
+            {
+              "name": "React/Redux",
+              "experience": 2018,
+              "progress": 90
+            },
+            {
+              "name": "Angular/AngularJS",
+              "experience": 2017,
+              "progress": 50
+            }
+          ]
         }
       ]
     },
-    {
-      "type": "backends",
-      "subSkills": [
-        {
-          "name": "Node",
-          "experience": 2017,
-          "progress": 90
-        },
-        {
-          "name": "Python",
-          "experience": 2018,
-          "progress": 60
-        },
-        {
-          "name": "PHP",
-          "experience": 2015,
-          "progress": 70
-        }
-      ]
-    },
-    {
-      "type": "frontends",
-      "subSkills": [
-        {
-          "name": "Vanilla Javascript",
-          "experience": 2015,
-          "progress": 50
-        },
-        {
-          "name": "React/Redux",
-          "experience": 2018,
-          "progress": 90
-        },
-        {
-          "name": "Angular/AngularJS",
-          "experience": 2017,
-          "progress": 50
-        }
-      ]
-    }
-  ],
+    "softSkills": [
+      "Results-oriented",
+      "Organizational capacity",
+      "Operability and commitment",
+      "Resistance to stress",
+      "Good manners"
+    ],
+    "languages": ["English", "French"]
+  },
   "resume": [
     {
       "name": "Education",
+      "slug": "education",
       "contents": [
         {
+          "slug": "ur-cst",
           "entity": {
             "name": "University of Rwanda - College of Science and Technology",
             "address": "Kigali, Rwanda"
@@ -101,8 +124,10 @@
     },
     {
       "name": "Professional Experience",
+      "slug": "professional-experience",
       "contents": [
         {
+          "slug": "pesachoice",
           "entity": {
             "name": "Pesachoice LLC",
             "address": "Kigali, Rwanda"
@@ -119,6 +144,7 @@
           ]
         },
         {
+          "slug": "andela",
           "entity": {
             "name": "Andela",
             "address": "Kigali, Rwanda"
@@ -134,5 +160,8 @@
         }
       ]
     }
+  ],
+  "hobbies": [
+    "Walking - great way to unwind, destress, and keep the mind sharp."
   ]
 }

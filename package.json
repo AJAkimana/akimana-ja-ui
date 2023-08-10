@@ -22,9 +22,12 @@
     "formik": "^2.1.4",
     "helmet": "^3.22.0",
     "hpp": "^0.2.3",
+    "i": "^0.3.7",
     "is-promise": "^2.1.0",
     "moment": "^2.29.4",
+    "npm": "^9.8.1",
     "path": "^0.12.7",
+    "pdf-creator-node": "^2.3.5",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.1",
@@ -41,7 +44,7 @@
     "yup": "^0.28.3"
   },
   "scripts": {
-    "start": "babel-node  server.js",
+    "start": "babel-node  app.js",
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

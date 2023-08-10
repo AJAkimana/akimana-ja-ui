@@ -115,6 +115,6 @@ export const validateMessageBody = (reqBody) => {
 };
 
 export const dataToJson = () => {
-  const jsonData = readFileSync(`${__dirname}/../config/data/myInfo.json`);
+  const jsonData = readFileSync(`${__dirname}/data/myInfo.json`);
   return JSON.parse(jsonData);
 };

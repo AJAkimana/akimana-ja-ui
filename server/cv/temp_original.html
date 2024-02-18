@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
   <head>
     <meta charset="utf-8" />
@@ -85,7 +85,7 @@
       }
     </style>
   </head>
-  <body>
+  <body style="height: 100%">
     <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
@@ -94,20 +94,24 @@
     <![endif]-->
     <div class="container text">
       <div class="header">
-        <h1 class="title name">{{profile.firstName}} {{profile.lastName}}</h1>
+        <h1 class="title name">Jean d Amour AKIMANIZANYE</h1>
         <p class="contacts">
-          <a href="tel:{{profile.phoneNumber}}" class="tel"
-            >{{profile.phoneNumber}}</a
-          >
+          <a href="tel:+250783543016" class="tel">+250 783 543 016</a>
           <br />
-          <a href="mailto:{{profile.email}}">{{profile.email}}</a>
+          <a href="mailto:akimanaja17@gmail.com">akimanaja17@gmail.com</a>
           <br />
-          <a href="{{profile.website}}">{{profile.website}}</a>
+          <a href="akimanaja.com">akimanaja.com</a>
         </p>
       </div>
       <div class="body">
         <div class="cv-header">
-          <p class="about">{{aboutMe}}</p>
+          <p class="about">
+            A passion driven, results-oriented, high-performance individual with
+            over 5 years of professional experience in software engineering, in
+            different programming languages and frameworks, having a drive to
+            create and manage innovative software solutions and a successful
+            track record of accomplishments.
+          </p>
         </div>
         <hr class="cv-hr" />
         <table>
@@ -115,21 +119,26 @@
             <td width="61%" style="vertical-align: top">
               <div class="cv-body-primary">
                 <h2 class="title">Experience</h2>
-                {{#each experiences}}
                 <div class="cv-experience">
-                  <p class="joining">{{this.startDate}} – {{this.endDate}}</p>
-                  <p><strong>{{this.role}}</strong></p>
-                  <p>
-                    <strong>{{this.entity.name}}</strong>,
-                    {{this.entity.address}}
-                  </p>
+                  <p class="joining">August 2016 – March 2019</p>
+                  <p><strong>Software Developer</strong></p>
+                  <p><strong>Data Systems Ltd</strong>, Kigali</p>
                   <ul>
-                    {{#each this.responsibilities}}
-                    <li>{{this}}</li>
-                    {{/each}}
+                    <li>
+                      Developing software and web applications to meet the
+                      company requirements using MEAN stack.
+                    </li>
+                    <li>Administration of Linux servers.</li>
+                    <li>
+                      Customizing and modifying open-source software to fit the
+                      company requirements.
+                    </li>
+                    <li>
+                      Designing and implementing UI mockups using prototyping
+                      tools
+                    </li>
                   </ul>
                 </div>
-                {{/each}}
               </div>
             </td>
             <td
@@ -139,37 +148,12 @@
               <div class="cv-body-secondary">
                 <h2 class="title">Skills</h2>
                 <ul>
-                  {{#each skills.techSkills.summary}}
-                  <li>{{this}}</li>
-                  {{/each}}
-                </ul>
-                <h2 class="title">Languages</h2>
-                <ul>
-                  {{#each skills.languages}}
-                  <li>{{this}}</li>
-                  {{/each}}
-                </ul>
-                <h2 class="title">Highlights</h2>
-                <ul>
-                  {{#each skills.softSkills}}
-                  <li>{{this}}</li>
-                  {{/each}}
-                </ul>
-                <h2 class="title">Education</h2>
-                <ul>
-                  {{#each educations}}
-                  <li>
-                    <p>
-                      <strong>{{this.role}}</strong>: <br />{{this.entity.name}}
-                    </p>
-                  </li>
-                  {{/each}}
-                </ul>
-                <h2 class="title">Hobbiess</h2>
-                <ul>
-                  {{#each hobbies}}
-                  <li>{{this}}</li>
-                  {{/each}}
+                  <li>Javascript</li>
+                  <li>Python</li>
+                  <li>PHP</li>
+                  <li>No/SQL Databases</li>
+                  <li>Testing</li>
+                  <li>Figma</li>
                 </ul>
               </div>
             </td>

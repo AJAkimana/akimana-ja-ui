@@ -29,7 +29,6 @@ jobs:
         run: |
           npm install
           npm run build-prod
-      - name: 'Copy the build'
       - uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.SSH_HOST }}

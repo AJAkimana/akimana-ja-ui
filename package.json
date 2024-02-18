@@ -44,7 +44,7 @@
     "yup": "^0.28.3"
   },
   "scripts": {
-    "start": "babel-node  app.js",
+    "start": "babel-node app.js",
     "dev": "react-scripts start",
     "deploy": "rm -rf build && tar zxvf build.tar.gz",
     "build-prod": "npm run build && npm run compress",

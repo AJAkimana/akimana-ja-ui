@@ -1,20 +1,29 @@
 import fs from "fs";
+import moment from "moment/moment";
 import pdf from "pdf-creator-node";
 import { dataToJson } from "../helper";
 
 export const generateCv = async () => {
   const { profile, skills, aboutMe, resume, hobbies } = dataToJson();
-  const dlFile = `${profile.firstName} ${profile.lastName}`.replace(" ", "_");
+  const dlFile = `${profile.firstName}_${profile.lastName}`.replace(" ", "_");
   try {
     const fileName = `./${dlFile}.pdf`;
     const html = fs.readFileSync(`${__dirname}/cv_temp.html`, "utf8");
     let contents =
-      '<div style="font-weight:900;margin-top:00px;text-align:center;">';
-    contents += profile.firstName;
+      '<div style="font-weight:900;margin-top:4px;text-align:center;">';
+    contents += `____${profile.firstName}___CV`;
     contents += "</div>";
 
+    const toDate = (item) => ({
+      ...item,
+      startDate: moment(item.startDate).format("MMMM YYYY"),
+      endDate: item.endDate
+        ? moment(item.endDate).format("MMMM YYYY")
+        : "Present",
+    });
+
     const options = {
-      format: "A2",
+      format: "A4",
       orientation: "portrait",
       footer: {
         height: "20mm",
@@ -29,16 +38,15 @@ export const generateCv = async () => {
     const document = {
       html,
       data: {
-        profile,
+        profile: { ...profile, phone: profile.phoneNumber.replace(" ", "") },
         skills,
         aboutMe,
-        educations: education?.contents || [],
-        experiences: experience?.contents || [],
+        educations: education?.contents.map(toDate) || [],
+        experiences: experience?.contents.map(toDate) || [],
         hobbies,
       },
       path: fileName,
     };
-    console.log(document);
     return pdf.create(document, options);
   } catch (error) {
     console.log(error);

@@ -51,6 +51,7 @@ jobs:
           script: |
             cd ~/profile
             git pull origin master
+            npm install
             npm run deploy
             echo "Restart the server"
             pm2 restart 1

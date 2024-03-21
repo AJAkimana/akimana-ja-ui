@@ -50,7 +50,7 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
             cd ~/profile
-            git pull origin develop
+            git pull origin master
             npm run deploy
             echo "Restart the server"
             pm2 restart 1

@@ -28,5 +28,6 @@ app.use("/api/cv", express.static("./res"));
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname + "/build", "index.html"));
 });
+// Build
 
 app.listen(port, () => console.log(`listening on port ${port}`));

@@ -1,5 +1,6 @@
 import sgMail from "@sendgrid/mail";
 import { readFileSync } from "fs";
+import moment from "moment";
 
 export const serverMsgs = {
   500: "Oops, It seems something went wrong please try again",
@@ -118,3 +119,9 @@ export const dataToJson = () => {
   const jsonData = readFileSync(`${__dirname}/data/myInfo.json`);
   return JSON.parse(jsonData);
 };
+
+export const toDate = (item) => ({
+  ...item,
+  startDate: moment(item.startDate).format("MMMM YYYY"),
+  endDate: item.endDate ? moment(item.endDate).format("MMMM YYYY") : "Present",
+});

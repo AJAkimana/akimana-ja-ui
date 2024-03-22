@@ -1,9 +1,8 @@
 import React from "react";
-import moment from "moment";
 import { DownloadCV } from "../DownloadCV";
+import { toDate } from "../utils/helpers";
 
 export const ResumeSection = ({ resume = [] }) => {
-  console.log(resume);
   return (
     <section id="resume" className="resume">
       <div className="container">
@@ -19,8 +18,7 @@ export const ResumeSection = ({ resume = [] }) => {
                 <div className="resume-item" key={cont.role}>
                   <h4>{cont.role}</h4>
                   <h5>
-                    {moment(cont.startDate).format("YYYY")} -{" "}
-                    {moment(cont.endDate || undefined).format("YYYY")}
+                    {toDate(cont.startDate)} - {toDate(cont.endDate)}
                   </h5>
                   <p>
                     <em>{cont.entity.name}</em>

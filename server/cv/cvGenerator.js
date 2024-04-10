@@ -8,17 +8,17 @@ export const executeGenerateCv = async () => {
   try {
     const fileName = `./${cvName}`;
     const html = fs.readFileSync(`${__dirname}/cv_temp.html`, "utf8");
-    let contents =
-      '<div style="font-weight:900;margin-top:4px;text-align:center;">';
-    contents += `____${profile.firstName}___CV`;
-    contents += "</div>";
+    // let contents =
+    //   '<div style="font-weight:900;margin-top:4px;text-align:center;">';
+    // contents += `____${profile.firstName}___CV`;
+    // contents += "</div>";
 
     const options = {
       format: "A4",
       orientation: "portrait",
       footer: {
         height: "20mm",
-        contents,
+        // contents,
       },
     };
     delete skills.techSkills.detailed;

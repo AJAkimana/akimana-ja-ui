@@ -1,4 +1,4 @@
-import { generateCv } from "./cv/cvGenerator";
+import { executeGenerateCv, cvName } from "./cv/cvGenerator";
 import {
   dataToJson,
   sendEmail,
@@ -34,12 +34,16 @@ export const getMyInfo = async (req, res) => {
   }
 };
 
-export const downloadCv = async (req, res) => {
+export const generateCv = async (req, res) => {
   try {
-    await generateCv();
+    await executeGenerateCv();
     return serverResponse(res, 200, "Success");
   } catch (error) {
     console.log(error);
     return serverResponse(res, 500, serverMsgs[500]);
   }
+};
+
+export const downloadCv = async (req, res) => {
+  res.download(cvName)
 };

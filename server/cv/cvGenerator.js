@@ -2,23 +2,23 @@ import fs from "fs";
 import pdf from "pdf-creator-node";
 import { dataToJson, toDate } from "../helper";
 
-export const generateCv = async () => {
+export const cvName = "Jean_d_Amour_AKIMANIZANYE.pdf";
+export const executeGenerateCv = async () => {
   const { profile, skills, aboutMe, resume, hobbies } = dataToJson();
-  const dlFile = `${profile.firstName.replace(" ", "_")}_${profile.lastName}`;
   try {
-    const fileName = `./${dlFile}.pdf`;
+    const fileName = `./${cvName}`;
     const html = fs.readFileSync(`${__dirname}/cv_temp.html`, "utf8");
-    let contents =
-      '<div style="font-weight:900;margin-top:4px;text-align:center;">';
-    contents += `____${profile.firstName}___CV`;
-    contents += "</div>";
+    // let contents =
+    //   '<div style="font-weight:900;margin-top:4px;text-align:center;">';
+    // contents += `____${profile.firstName}___CV`;
+    // contents += "</div>";
 
     const options = {
       format: "A4",
       orientation: "portrait",
       footer: {
         height: "20mm",
-        contents,
+        // contents,
       },
     };
     delete skills.techSkills.detailed;

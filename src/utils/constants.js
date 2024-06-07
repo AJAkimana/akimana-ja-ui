@@ -184,6 +184,7 @@ export const data = {
   ],
   resume: [
     {
+      key: "education",
       name: "Education",
       contents: [
         {
@@ -210,8 +211,22 @@ export const data = {
       ],
     },
     {
+      key: "experience",
       name: "Professional Experience",
       contents: [
+        {
+          slug: "gitstart",
+          entity: {
+            name: "GitStart",
+            address: "San Francisco, CA",
+          },
+          role: "Software Engineer",
+          startDate: "2021-10-15",
+          endDate: null,
+          responsibilities: [
+            "Contributed to different open-source projects like Sourcegraph, Supabase, and others.",
+          ],
+        },
         {
           entity: {
             name: "Pesachoice LLC",

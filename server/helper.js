@@ -123,5 +123,5 @@ export const dataToJson = () => {
 export const toDate = (item) => ({
   ...item,
   startDate: moment(item.startDate).format("MMMM YYYY"),
-  endDate: item.endDate ? moment(item.endDate).format("MMMM YYYY") : "Present",
+  endDate: moment(item.endDate || undefined).format("MMMM YYYY"),
 });

@@ -1,6 +1,6 @@
 import React from "react";
 import { DownloadCV } from "../DownloadCV";
-import { toDate } from "../utils/helpers";
+import { toDuration } from "../utils/helpers";
 
 export const ResumeSection = ({ resume = [] }) => {
   return (
@@ -18,7 +18,7 @@ export const ResumeSection = ({ resume = [] }) => {
                 <div className="resume-item" key={cont.role}>
                   <h4>{cont.role}</h4>
                   <h5>
-                    {toDate(cont.startDate)} - {toDate(cont.endDate)}
+                    {toDuration(cont.startDate, cont.endDate, "MMMM YYYY")}
                   </h5>
                   <p>
                     <em>{cont.entity.name}</em>

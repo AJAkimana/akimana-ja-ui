@@ -14,12 +14,12 @@
   "skills": {
     "techSkills": {
       "summary": [
-        "Javascript",
-        "Python",
-        "PHP",
-        "No/SQL Databases",
-        "Testing",
-        "Figma"
+        "Version Control Systems(Git)",
+        "Cloud Computing(AWS, VPS)",
+        "Containerization and Orchestration(Docker mainly)",
+        "Web Development Frameworks(Javascript, Python, PHP)",
+        "APIs and Web Services(RESTful and GraphQL APIs)",
+        "Continuous learning"
       ],
       "detailed": [
         {
@@ -85,11 +85,11 @@
       ]
     },
     "softSkills": [
+      "Problem-solving",
+      "Team collaboration",
       "Results-oriented",
       "Organizational capacity",
-      "Operability and commitment",
-      "Resistance to stress",
-      "Good manners"
+      "Operability and commitment"
     ],
     "languages": ["English", "French"]
   },

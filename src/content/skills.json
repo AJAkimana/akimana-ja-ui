@@ -1,0 +1,29 @@
+{
+  "intro": "I'm not bound to any technology. In fact, I choose a technology based on the problem at hand. So far, these are the technologies I have used.",
+  "groups": [
+    {
+      "name": "Databases",
+      "items": [
+        { "name": "SQL (MySQL, PostgreSQL)", "since": 2016 },
+        { "name": "NoSQL (Mongo, Couchbase)", "since": 2017 },
+        { "name": "Cloud database (Firebase)", "since": 2018 }
+      ]
+    },
+    {
+      "name": "Backend",
+      "items": [
+        { "name": "Node", "since": 2017 },
+        { "name": "Python", "since": 2018 },
+        { "name": "PHP", "since": 2015 }
+      ]
+    },
+    {
+      "name": "Frontend",
+      "items": [
+        { "name": "Vanilla JavaScript", "since": 2015 },
+        { "name": "React/Redux", "since": 2018 },
+        { "name": "Angular/AngularJS", "since": 2017 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#040b14" />
+    <title>Jean d'Amour Akimana | Software Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Jean d'Amour Akimana (Akimana AJA), software engineer based in Kigali, Rwanda."
+    />
+    <meta name="author" content="Jean d'Amour Akimana" />
+    <meta property="og:title" content="Jean d'Amour Akimana | Software Engineer" />
+    <meta
+      property="og:description"
+      content="Portfolio, projects and CV of Jean d'Amour Akimana, software engineer."
+    />
+    <meta property="og:image" content="/assets/img/me.jpg" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@400;600&family=Raleway:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <!-- Lets Netlify detect the contact form at deploy time; the React form posts to it. -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="names" />
+      <input type="email" name="email" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+      <input name="bot-field" />
+    </form>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

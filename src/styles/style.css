@@ -294,18 +294,26 @@ h6 {
   color: var(--color-heading);
 }
 
-#hero p {
+#hero .hero-title {
   color: var(--color-muted);
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   font-size: 24px;
   font-family: "JetBrains Mono", monospace;
 }
 
-#hero p::before {
+#hero .hero-title::before {
   content: "> ";
 }
 
-#hero p span {
+#hero .hero-description {
+  max-width: 620px;
+  margin: 0 auto 50px;
+  color: var(--color-text);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+#hero .hero-title span {
   color: var(--color-heading);
   padding-bottom: 4px;
   letter-spacing: 1px;
@@ -317,8 +325,11 @@ h6 {
     font-size: 28px;
     line-height: 36px;
   }
-  #hero p {
+  #hero .hero-title {
     font-size: 16px;
+  }
+  #hero .hero-description {
+    font-size: 15px;
   }
 }
 

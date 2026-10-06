@@ -9,5 +9,3 @@ export const formatMonth = (date) => monthYear.format(new Date(date));
 
 export const formatPeriod = (start, end) =>
   `${formatMonth(start)} - ${end ? formatMonth(end) : "Present"}`;
-
-export const yearsSince = (year) => new Date().getFullYear() - year;

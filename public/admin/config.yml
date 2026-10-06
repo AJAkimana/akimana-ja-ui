@@ -79,16 +79,20 @@ collections:
             summary: "{{fields.name}}"
             fields:
               - { name: name, label: Group name, widget: string }
+              - name: icon
+                label: Icon
+                widget: select
+                required: false
+                options:
+                  [code-alt, server, desktop, cloud, data, network-chart, broadcast, credit-card, check-shield, cog, mobile, lock-alt, bar-chart-alt-2, brain, test-tube, git-branch]
               - name: items
                 label: Skills
                 widget: list
-                summary: "{{fields.name}} (since {{fields.since}})"
-                fields:
-                  - { name: name, label: Skill, widget: string }
-                  - { name: since, label: Using it since (year), widget: number, value_type: int, min: 1990, max: 2100 }
+                collapsed: false
+                field: { name: item, label: Skill, widget: string }
 
       - name: resume
-        label: Resume (education & experience)
+        label: Resume (experience, education, languages)
         file: src/content/resume.json
         fields:
           - name: experience
@@ -101,6 +105,7 @@ collections:
               - { name: location, label: Location, widget: string, required: false }
               - { name: startDate, label: Start date, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false, picker_utc: true }
               - { name: endDate, label: End date (leave empty if current), widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false, picker_utc: true, required: false, default: "" }
+              - { name: summary, label: One-line summary, widget: string, required: false }
               - name: highlights
                 label: Highlights
                 widget: list
@@ -111,6 +116,15 @@ collections:
             widget: list
             summary: "{{fields.role}} - {{fields.organization}}"
             fields: *resumeItem
+          - name: languages
+            label: Languages
+            widget: list
+            required: false
+            summary: "{{fields.name}} - {{fields.level}}"
+            fields:
+              - { name: name, label: Language, widget: string }
+              - { name: level, label: Level, widget: string }
+          - { name: interests, label: Interests & activities, widget: text, required: false }
 
       - name: projects
         label: Projects

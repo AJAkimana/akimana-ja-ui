@@ -1,28 +1,61 @@
 {
-  "intro": "I'm not bound to any technology. In fact, I choose a technology based on the problem at hand. So far, these are the technologies I have used.",
+  "intro": "The languages, tools and practices I use to design, build and run production systems.",
   "groups": [
     {
-      "name": "Databases",
-      "items": [
-        { "name": "SQL (MySQL, PostgreSQL)", "since": 2016 },
-        { "name": "NoSQL (Mongo, Couchbase)", "since": 2017 },
-        { "name": "Cloud database (Firebase)", "since": 2018 }
-      ]
+      "name": "Languages",
+      "icon": "code-alt",
+      "items": ["Python", "TypeScript", "JavaScript", "Go", "PHP"]
     },
     {
-      "name": "Backend",
-      "items": [
-        { "name": "Node", "since": 2017 },
-        { "name": "Python", "since": 2018 },
-        { "name": "PHP", "since": 2015 }
-      ]
+      "name": "Backend & APIs",
+      "icon": "server",
+      "items": ["Node.js", "Express.js", "FastAPI", "Django", "REST APIs", "GraphQL"]
     },
     {
       "name": "Frontend",
+      "icon": "desktop",
+      "items": ["React", "Redux"]
+    },
+    {
+      "name": "Cloud & DevOps",
+      "icon": "cloud",
+      "items": ["AWS (EC2, S3, RDS, Lambda)", "Docker", "CI/CD", "Nginx", "Linux"]
+    },
+    {
+      "name": "Databases",
+      "icon": "data",
+      "items": ["PostgreSQL", "MongoDB", "Couchbase", "Redis", "DynamoDB"]
+    },
+    {
+      "name": "Architecture",
+      "icon": "network-chart",
       "items": [
-        { "name": "Vanilla JavaScript", "since": 2015 },
-        { "name": "React/Redux", "since": 2018 },
-        { "name": "Angular/AngularJS", "since": 2017 }
+        "Multi-tenant systems",
+        "Distributed systems",
+        "Event-driven systems",
+        "API design",
+        "System design"
+      ]
+    },
+    {
+      "name": "Streaming & Real-Time",
+      "icon": "broadcast",
+      "items": ["HTTP audio streaming", "Concurrent connections", "Real-time data handling"]
+    },
+    {
+      "name": "Integrations",
+      "icon": "credit-card",
+      "items": ["Stripe", "PayPal", "Braintree", "Google Pay"]
+    },
+    {
+      "name": "Practices",
+      "icon": "check-shield",
+      "items": [
+        "TDD",
+        "Code reviews",
+        "Agile",
+        "Performance optimization",
+        "Production troubleshooting"
       ]
     }
   ]

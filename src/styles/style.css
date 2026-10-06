@@ -370,38 +370,49 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
-.skills .progress {
-  height: 50px;
-  display: block;
-  background: none;
+.skills .skill-group {
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06);
 }
 
-.skills .progress .skill {
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
+.skills .skill-group h4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-size: 17px;
   font-weight: 600;
+  text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #050d18;
 }
 
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
+.skills .skill-group h4 i {
+  font-size: 22px;
+  color: #149ddd;
 }
 
-.skills .progress-bar-wrap {
-  background: #dce8f8;
+.skills .skill-group ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: #149ddd;
+.skills .skill-group li {
+  padding: 4px 12px;
+  border-radius: 50px;
+  background: #e4edf9;
+  color: #173b6c;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 /*--------------------------------------------------------------
@@ -463,6 +474,23 @@ section {
   top: 0;
   background: #fff;
   border: 2px solid #1f5297;
+}
+
+.resume .resume-list {
+  padding: 0;
+  list-style: none;
+}
+
+.resume .resume-list li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-list i,
+.resume .resume-interests i {
+  margin-right: 8px;
+  font-size: 18px;
+  color: #149ddd;
+  vertical-align: -3px;
 }
 
 /*--------------------------------------------------------------

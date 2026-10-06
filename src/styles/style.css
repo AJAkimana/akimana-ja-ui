@@ -728,9 +728,24 @@ section {
   color: #fff;
 }
 
-.contact .info .email:hover i,
-.contact .info .address:hover i,
-.contact .info .phone:hover i {
+.contact .info .social-links a i {
+  float: none;
+  display: inline;
+  width: auto;
+  height: auto;
+  font-size: 18px;
+  background: none;
+  color: inherit;
+}
+
+.contact .info .follow h4 {
+  margin-bottom: 12px;
+}
+
+.contact .info .email:hover > i,
+.contact .info .address:hover > i,
+.contact .info .phone:hover > i,
+.contact .info .follow:hover > i {
   background: #149ddd;
   color: #fff;
 }

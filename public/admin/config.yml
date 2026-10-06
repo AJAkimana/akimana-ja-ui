@@ -56,7 +56,6 @@ collections:
           - { name: address, label: Address, widget: string, required: false }
           - { name: degree, label: Degree, widget: string, required: false }
           - { name: availability, label: Freelance availability, widget: string, required: false }
-          - { name: mapEmbedUrl, label: Google Maps embed URL, widget: string, required: false }
           - name: socials
             label: Social links
             widget: list

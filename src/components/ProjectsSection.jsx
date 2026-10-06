@@ -85,7 +85,7 @@ export const ProjectsSection = ({ projects }) => {
             const images = project.images ?? [];
             return (
               <div
-                className="col-lg-4 col-md-6 portfolio-item"
+                className="col-lg-6 portfolio-item"
                 data-aos="fade-up"
                 key={project.title}
               >

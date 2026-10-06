@@ -76,15 +76,24 @@ export const ContactSection = ({ profile }) => {
                   </a>
                 </p>
               </div>
-              {profile.mapEmbedUrl && (
-                <iframe
-                  src={profile.mapEmbedUrl}
-                  title="Map"
-                  style={{ border: 0, width: "100%", height: "290px" }}
-                  loading="lazy"
-                  allowFullScreen
-                ></iframe>
-              )}
+
+              <div className="follow">
+                <i className="bx bx-share-alt"></i>
+                <h4>Find me on:</h4>
+                <div className="social-links">
+                  {profile.socials.map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.link}
+                      aria-label={social.name}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className={`bx bxl-${social.name}`}></i>
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
@@ -139,7 +148,7 @@ export const ContactSection = ({ profile }) => {
                   id="contact-message"
                   className="form-control"
                   name="message"
-                  rows="10"
+                  rows="7"
                   required
                   value={messageBody.message}
                   onChange={onHandleChange}

@@ -1,7 +1,11 @@
 {
   "displayName": "Akimana AJA",
   "fullName": "Jean d'Amour Akimanizanye",
-  "titles": ["Senior Backend Engineer", "Full-Stack Engineer"],
+  "titles": [
+    "Senior Backend Engineer",
+    "Full-Stack Engineer"
+  ],
+  "heroDescription": "Backend-focused engineer building API-driven systems, SaaS platforms and cloud-native applications that scale, from architecture through production.",
   "avatar": "/assets/img/me.jpg",
   "photo": "/assets/img/profile-img.jpg",
   "cv": "/uploads/Jean_d_Amour_Akimanizanye_CV.pdf",
@@ -22,10 +26,22 @@
   "degree": "Bachelor of Computer Science",
   "availability": "Available",
   "socials": [
-    { "name": "github", "link": "https://github.com/AJAkimana" },
-    { "name": "gitlab", "link": "https://gitlab.com/AJAkimana" },
-    { "name": "linkedin", "link": "https://www.linkedin.com/in/ajakimana" },
-    { "name": "twitter", "link": "https://twitter.com/AJAkimana" },
+    {
+      "name": "github",
+      "link": "https://github.com/AJAkimana"
+    },
+    {
+      "name": "gitlab",
+      "link": "https://gitlab.com/AJAkimana"
+    },
+    {
+      "name": "linkedin",
+      "link": "https://www.linkedin.com/in/ajakimana"
+    },
+    {
+      "name": "twitter",
+      "link": "https://twitter.com/AJAkimana"
+    },
     {
       "name": "stack-overflow",
       "link": "https://stackoverflow.com/users/7079061/akimana-ajoully-jean-damour"

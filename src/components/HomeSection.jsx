@@ -22,7 +22,7 @@ export const HomeSection = ({ profile }) => {
     >
       <div className="hero-container" data-aos="fade-in">
         <h1>{profile.fullName}</h1>
-        <p>
+        <p className="hero-title">
           A{" "}
           <TypedText
             strings={profile.titles}
@@ -32,6 +32,9 @@ export const HomeSection = ({ profile }) => {
             loop
           />
         </p>
+        {profile.heroDescription && (
+          <p className="hero-description">{profile.heroDescription}</p>
+        )}
       </div>
     </section>
   );

@@ -1,0 +1,135 @@
+# Decap CMS dashboard, served at /admin.
+# Every "Publish" commits to the repo, which triggers a Netlify rebuild.
+backend:
+  name: github
+  repo: AJAkimana/akimana-ja-ui
+  branch: master
+
+# `npm run cms` + `npm run dev` lets you edit locally without GitHub login.
+local_backend: true
+
+site_url: https://www.akimanaja.com
+display_url: https://www.akimanaja.com
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: site
+    label: Site content
+    format: json
+    editor:
+      preview: false
+    files:
+      - name: profile
+        label: Profile, About & CV
+        file: src/content/profile.json
+        fields:
+          - { name: displayName, label: Display name (sidebar), widget: string }
+          - { name: fullName, label: Full name (hero), widget: string }
+          - name: titles
+            label: Hero titles (typed animation)
+            widget: list
+            collapsed: false
+            field: { name: title, label: Title, widget: string }
+          - name: cv
+            label: CV (PDF)
+            widget: file
+            hint: Upload the latest CV as a PDF. All "Download CV" buttons use this file.
+            required: false
+          - { name: avatar, label: Sidebar photo, widget: image }
+          - { name: photo, label: About photo, widget: image }
+          - name: intro
+            label: About - intro paragraphs
+            widget: list
+            collapsed: false
+            field: { name: paragraph, label: Paragraph, widget: text }
+          - { name: aboutTitle, label: About - heading, widget: string }
+          - name: aboutText
+            label: About - body paragraphs (first one is shown in italics)
+            widget: list
+            collapsed: false
+            field: { name: paragraph, label: Paragraph, widget: text }
+          - { name: website, label: Website, widget: string, required: false }
+          - { name: phoneNumber, label: Phone, widget: string, required: false }
+          - { name: email, label: Email, widget: string }
+          - { name: city, label: City, widget: string, required: false }
+          - { name: address, label: Address, widget: string, required: false }
+          - { name: degree, label: Degree, widget: string, required: false }
+          - { name: availability, label: Freelance availability, widget: string, required: false }
+          - { name: mapEmbedUrl, label: Google Maps embed URL, widget: string, required: false }
+          - name: socials
+            label: Social links
+            widget: list
+            fields:
+              - name: name
+                label: Network
+                widget: select
+                options:
+                  [github, gitlab, linkedin, twitter, stack-overflow, medium, dev-to, youtube, instagram, facebook]
+              - { name: link, label: URL, widget: string }
+
+      - name: skills
+        label: Skills
+        file: src/content/skills.json
+        fields:
+          - { name: intro, label: Intro, widget: text }
+          - name: groups
+            label: Skill groups
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: Group name, widget: string }
+              - name: items
+                label: Skills
+                widget: list
+                summary: "{{fields.name}} (since {{fields.since}})"
+                fields:
+                  - { name: name, label: Skill, widget: string }
+                  - { name: since, label: Using it since (year), widget: number, value_type: int, min: 1990, max: 2100 }
+
+      - name: resume
+        label: Resume (education & experience)
+        file: src/content/resume.json
+        fields:
+          - name: experience
+            label: Professional experience
+            widget: list
+            summary: "{{fields.role}} - {{fields.organization}}"
+            fields: &resumeItem
+              - { name: role, label: Role / degree, widget: string }
+              - { name: organization, label: Company / school, widget: string }
+              - { name: location, label: Location, widget: string, required: false }
+              - { name: startDate, label: Start date, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false, picker_utc: true }
+              - { name: endDate, label: End date (leave empty if current), widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false, picker_utc: true, required: false, default: "" }
+              - name: highlights
+                label: Highlights
+                widget: list
+                collapsed: false
+                field: { name: highlight, label: Highlight, widget: text }
+          - name: education
+            label: Education
+            widget: list
+            summary: "{{fields.role}} - {{fields.organization}}"
+            fields: *resumeItem
+
+      - name: projects
+        label: Projects
+        file: src/content/projects.json
+        fields:
+          - { name: intro, label: Intro, widget: text, required: false }
+          - name: projects
+            label: Projects
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: description, label: Short description, widget: text, required: false }
+              - { name: tech, label: Tech (comma separated), widget: list, required: false }
+              - { name: liveUrl, label: Live URL, widget: string, required: false }
+              - { name: sourceUrl, label: Source code URL, widget: string, required: false }
+              - name: images
+                label: Screenshots (first one is the cover)
+                widget: list
+                required: false
+                collapsed: false
+                field: { name: image, label: Screenshot, widget: image }

@@ -1,0 +1,61 @@
+{
+  "education": [
+    {
+      "role": "Bachelor of Computer Science",
+      "organization": "University of Rwanda - College of Science and Technology",
+      "location": "Kigali, Rwanda",
+      "startDate": "2012-09-03",
+      "endDate": "2016-07-29",
+      "highlights": [
+        "Introduction to Computer Science: A foundational course that provides an overview of computer science principles, basic programming concepts, and problem-solving techniques.",
+        "Data Structures and Algorithms: Covered the study of organizing and managing data efficiently, along with algorithms for solving computational problems. Explored arrays, linked lists, stacks, queues, trees, graphs, sorting algorithms, searching algorithms, and algorithm analysis.",
+        "Programming Languages: Explored different programming languages, their syntax, semantics, and features. Covered languages like C, Java, Python, or others, and also included concepts such as data types, control structures, functions, object-oriented programming, and more.",
+        "Computer Architecture: Focused on the design and organization of computer systems, including topics like CPU architecture, memory hierarchy, input/output systems, and digital logic.",
+        "Operating Systems: Covered the fundamental concepts of operating systems, including process management, memory management, file systems, concurrency, and synchronization.",
+        "Databases: Covered the principles and techniques used in managing and querying databases. These included relational database management systems (RDBMS), SQL, database design, normalization, indexing, and transactions.",
+        "Networks and Network Security: Explored the basics of computer networks, network protocols, data transmission, network architecture, network security, and cryptography.",
+        "Software Engineering: Focused on software development methodologies, software design principles, software testing, software project management, and software quality assurance.",
+        "Artificial Intelligence and Machine Learning: Introduced the concepts of artificial intelligence, machine learning, and data mining. Covered topics like machine learning algorithms, neural networks, natural language processing, and computer vision.",
+        "Theory of Computation: Covered the theoretical foundations of computer science, including formal languages, automata theory, computability, and complexity theory."
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Software Engineer",
+      "organization": "GitStart",
+      "location": "San Francisco, CA",
+      "startDate": "2021-10-15",
+      "endDate": "",
+      "highlights": [
+        "Contributed to different open-source projects like Sourcegraph, Supabase, and others."
+      ]
+    },
+    {
+      "role": "Lead Software Engineer",
+      "organization": "Huza HR",
+      "location": "Kigali, Rwanda",
+      "startDate": "2021-11-15",
+      "endDate": "",
+      "highlights": [
+        "Lead a team of junior and mid-level software engineers to build and deliver great software products.",
+        "Mentor and coach software developers to increase their performance, skill, and experience.",
+        "Provide technological guidance and oversee engineering projects.",
+        "Manage software development lifecycle using Agile methodologies.",
+        "Perform code reviews, analysis, translating user stories, and technical design of products."
+      ]
+    },
+    {
+      "role": "Associate Software Engineer",
+      "organization": "Andela",
+      "location": "Kigali, Rwanda",
+      "startDate": "2019-04-01",
+      "endDate": "2020-04-03",
+      "highlights": [
+        "Collaborated with cross-functional development team members to analyze potential system solutions based on evolving client requirements.",
+        "Tested troubleshooting methods, devised innovative solutions, and documented resolutions for inclusion in knowledge base for support team use.",
+        "Collaborated with developers and product owners to stay current on product features and intended functionality."
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "YottaGet",
+  "short_name": "Akimana AJA",
+  "name": "Jean d'Amour Akimana | Software Engineer",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#040b14",
   "background_color": "#ffffff"
 }

@@ -1,38 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# akimanaja.com
 
-## Available Scripts
+Personal portfolio of Jean d'Amour Akimana. A static React site (Vite) hosted on Netlify, with a
+Git-based dashboard (Decap CMS) at `/admin`.
 
-In the project directory, you can run:
+## Content
 
-### `npm start`
+All site content lives in [`src/content/`](src/content/) as JSON:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+| File | What it holds |
+| --- | --- |
+| `profile.json` | Name, hero titles, About text, contact details, social links, CV file |
+| `skills.json` | Skill groups and the year each skill was first used |
+| `resume.json` | Experience and education |
+| `projects.json` | Projects and their screenshots |
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Uploaded files (CV PDF, screenshots) go to [`public/uploads/`](public/uploads/).
 
-### `npm test`
+Edit content from the dashboard at **`/admin`** (log in with GitHub). Each "Publish" commits to
+`master`, and Netlify rebuilds the site in about a minute. Each publish uses one deploy from the
+Netlify free plan's monthly credits, so batch edits where possible.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Development
 
-### `npm run build`
+```bash
+npm install
+npm run dev        # site at http://localhost:5173
+npm run build      # production build in dist/
+npm run lint
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To use the dashboard locally without GitHub, run `npm run cms` in a second terminal and open
+http://localhost:5173/admin/index.html. Changes are written straight to the files in your working
+copy; commit them as usual.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## One-time Netlify setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. **Create the site:** Netlify → Add new site → Import from GitHub → `AJAkimana/akimana-ja-ui`.
+   Build settings come from [`netlify.toml`](netlify.toml).
+2. **Contact form:** Site configuration → Forms → enable form detection, then add an email
+   notification for the `contact` form.
+3. **Dashboard login:** create a GitHub OAuth app (GitHub → Settings → Developer settings → OAuth
+   Apps) with callback URL `https://api.netlify.com/auth/done`. Then in Netlify go to Site
+   configuration → Access & security → OAuth → Install provider → GitHub, and paste the client ID
+   and secret.
+4. **Domain:** Domain management → add `akimanaja.com`, then point the DNS records at your
+   registrar to Netlify as instructed. HTTPS is provisioned automatically.

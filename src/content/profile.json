@@ -1,0 +1,38 @@
+{
+  "displayName": "Akimana AJA",
+  "fullName": "Jean d'Amour AKIMANIZANYE",
+  "titles": ["Software Engineer", "Data Analyst"],
+  "avatar": "/assets/img/me.jpg",
+  "photo": "/assets/img/profile-img.jpg",
+  "cv": "/uploads/Jean_d_amour_AKIMANIZANYE.pdf",
+  "intro": [
+    "I am a software engineer who loves playing with a computer to create solutions to real-world problems. I hold a Bachelor's degree in Computer Science from University of Rwanda.",
+    "I help teams produce exceptional products by offering in-depth quality assurance support. Open and clear communicator with good multitasking skills, organized nature and strong attention to detail."
+  ],
+  "aboutTitle": "Full stack developer.",
+  "aboutText": [
+    "Learning is an endless work, none on earth has ever gotten on a limit of knowledge. What I know today will become what I knew tomorrow and if it is not improved, it might not be helping in tomorrow's situation. That's why we need to plan on how to improve our knowledge on a daily basis.",
+    "I believe that every opportunity to provide solutions through programming does not only benefit the receiver of the solution but it also provides me an opportunity to learn some new things and get better at what I do."
+  ],
+  "website": "www.akimanaja.com",
+  "phoneNumber": "+250 783 543 016",
+  "email": "akimanaja17@gmail.com",
+  "city": "Kigali, Rwanda",
+  "address": "Kigali, KN 107 St",
+  "degree": "Bachelor",
+  "availability": "Available",
+  "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d882.6006832503714!2d30.056998159541763!3d-1.9593149998973003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwNTcnMzMuNSJTIDMwwrAwMycyNy4zIkU!5e1!3m2!1sen!2srw!4v1586679814460!5m2!1sen!2srw",
+  "socials": [
+    { "name": "github", "link": "https://github.com/AJAkimana" },
+    { "name": "gitlab", "link": "https://gitlab.com/AJAkimana" },
+    { "name": "twitter", "link": "https://twitter.com/AJAkimana" },
+    {
+      "name": "stack-overflow",
+      "link": "https://stackoverflow.com/users/7079061/akimana-ajoully-jean-damour"
+    },
+    {
+      "name": "linkedin",
+      "link": "https://www.linkedin.com/in/jean-d-amour-akimanizanye-8553a167/"
+    }
+  ]
+}

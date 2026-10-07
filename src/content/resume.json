@@ -1,0 +1,85 @@
+{
+  "experience": [
+    {
+      "role": "Lead Software Engineer",
+      "organization": "Huza HR",
+      "location": "Kigali, Rwanda",
+      "startDate": "2021-10-01",
+      "endDate": "",
+      "summary": "Backend & system architecture lead for enterprise HR SaaS platform.",
+      "highlights": [
+        "Designed and implemented scalable backend architecture and REST APIs powering payroll, employee management, and reporting systems.",
+        "Built event-driven workflows automating employee lifecycle processes, reducing manual operations.",
+        "Deployed and managed Dockerized services on AWS with CI/CD pipelines, improving release reliability.",
+        "Improved system latency by 10% through backend refactoring and database optimization.",
+        "Led technical decision-making, system design, and incident resolution in production environments.",
+        "Enabled scalable multi-tenant architecture supporting enterprise clients."
+      ]
+    },
+    {
+      "role": "Software Engineer",
+      "organization": "GitStart",
+      "location": "Remote (USA), Part-time",
+      "startDate": "2021-11-01",
+      "endDate": "2024-12-01",
+      "summary": "Contributed to high-scale production systems across globally used platforms.",
+      "highlights": [
+        "Implemented backend scalability improvements for Sourcegraph's enterprise search infrastructure.",
+        "Optimized Supabase real-time systems, improving performance for thousands of concurrent connections.",
+        "Built production-ready backend features and CMS extensions for Strapi in large-scale deployments."
+      ]
+    },
+    {
+      "role": "Software Engineer",
+      "organization": "Benipal Technologies",
+      "location": "Remote (USA)",
+      "startDate": "2020-12-01",
+      "endDate": "2021-08-01",
+      "highlights": [
+        "Refactored legacy backend systems, improving maintainability and performance.",
+        "Integrated multi-provider payment systems (Stripe, PayPal, Braintree, Google Pay).",
+        "Built notification systems using Firebase Cloud Messaging.",
+        "Supported backend R&D for scalable system improvements."
+      ]
+    },
+    {
+      "role": "Team Lead & Software Engineer",
+      "organization": "Andela",
+      "location": "Kigali, Rwanda",
+      "startDate": "2019-04-01",
+      "endDate": "2020-06-01",
+      "highlights": [
+        "Led a team of 5 engineers delivering full-stack applications with strong backend foundations.",
+        "Built a pharmaceutical inventory system with real-time stock tracking.",
+        "Developed backend services using PHP (Lumen) and Couchbase.",
+        "Mentored engineers and conducted code reviews."
+      ]
+    },
+    {
+      "role": "Software Developer",
+      "organization": "Data Systems Ltd",
+      "location": "Kigali, Rwanda",
+      "startDate": "2016-08-01",
+      "endDate": "2019-03-01",
+      "highlights": [
+        "Built LMS platform (MEAN stack) supporting 10,000+ users.",
+        "Developed an offline-capable desktop application, published on the Microsoft Store."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "role": "Bachelor of Computer Science",
+      "organization": "University of Rwanda",
+      "location": "Kigali, Rwanda",
+      "startDate": "2012-09-01",
+      "endDate": "2016-07-01",
+      "highlights": []
+    }
+  ],
+  "languages": [
+    { "name": "Kinyarwanda", "level": "Native" },
+    { "name": "English", "level": "Fluent (C2)" }
+  ],
+  "interests": "Hiking (Bisoke & Muhavura summits), reading personal development books ('The Happiness Advantage'), and volunteering in community tech initiatives."
+}

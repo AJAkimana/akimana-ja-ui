@@ -1,0 +1,17 @@
+{
+  "intro": "A selection of things I have built.",
+  "projects": [
+    {
+      "title": "Multi-Tenant Internet Radio Streaming Platform",
+      "description": "Built and hosted a multi-tenant internet radio platform: Go for audio streaming, Python/Django for APIs and station management, and React for the UI/dashboard. Designed the streaming service to support at least 1,000 concurrent listeners.",
+      "tech": ["Go", "Python", "Django", "React", "Nginx", "Linux"],
+      "images": []
+    },
+    {
+      "title": "AJA Store - Transaction Platform",
+      "description": "Developed backend services for real-time transaction processing and built analytics dashboards with live data updates.",
+      "tech": ["Python", "GraphQL", "React", "Nginx"],
+      "images": []
+    }
+  ]
+}

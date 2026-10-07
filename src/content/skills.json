@@ -1,0 +1,62 @@
+{
+  "intro": "The languages, tools and practices I use to design, build and run production systems.",
+  "groups": [
+    {
+      "name": "Languages",
+      "icon": "code-alt",
+      "items": ["Python", "TypeScript", "JavaScript", "Go", "PHP"]
+    },
+    {
+      "name": "Backend & APIs",
+      "icon": "server",
+      "items": ["Node.js", "Express.js", "FastAPI", "Django", "REST APIs", "GraphQL"]
+    },
+    {
+      "name": "Frontend",
+      "icon": "desktop",
+      "items": ["React", "Redux"]
+    },
+    {
+      "name": "Cloud & DevOps",
+      "icon": "cloud",
+      "items": ["AWS (EC2, S3, RDS, Lambda)", "Docker", "CI/CD", "Nginx", "Linux"]
+    },
+    {
+      "name": "Databases",
+      "icon": "data",
+      "items": ["PostgreSQL", "MongoDB", "Couchbase", "Redis", "DynamoDB"]
+    },
+    {
+      "name": "Architecture",
+      "icon": "network-chart",
+      "items": [
+        "Multi-tenant systems",
+        "Distributed systems",
+        "Event-driven systems",
+        "API design",
+        "System design"
+      ]
+    },
+    {
+      "name": "Streaming & Real-Time",
+      "icon": "broadcast",
+      "items": ["HTTP audio streaming", "Concurrent connections", "Real-time data handling"]
+    },
+    {
+      "name": "Integrations",
+      "icon": "credit-card",
+      "items": ["Stripe", "PayPal", "Braintree", "Google Pay"]
+    },
+    {
+      "name": "Practices",
+      "icon": "check-shield",
+      "items": [
+        "TDD",
+        "Code reviews",
+        "Agile",
+        "Performance optimization",
+        "Production troubleshooting"
+      ]
+    }
+  ]
+}

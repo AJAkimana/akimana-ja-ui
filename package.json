@@ -1,71 +1,30 @@
 {
-  "name": "akimana-jay-ui",
-  "version": "0.1.1",
+  "name": "akimana-ja-ui",
+  "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "@babel/core": "^7.10.1",
-    "@babel/node": "^7.10.1",
-    "@babel/plugin-proposal-class-properties": "^7.10.1",
-    "@babel/preset-env": "^7.10.1",
-    "@babel/preset-react": "^7.10.1",
-    "@material-ui/core": "^4.9.8",
-    "@material-ui/icons": "^4.9.1",
-    "@sendgrid/mail": "^7.4.5",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "axios": "^0.21.1",
-    "bootstrap": "^4.4.1",
-    "csurf": "^1.11.0",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "formik": "^2.1.4",
-    "helmet": "^3.22.0",
-    "hpp": "^0.2.3",
-    "i": "^0.3.7",
-    "is-promise": "^2.1.0",
-    "moment": "^2.29.4",
-    "npm": "^9.8.1",
-    "path": "^0.12.7",
-    "pdf-creator-node": "^2.3.5",
-    "react": "^16.13.1",
-    "react-bootstrap": "^1.0.0",
-    "react-dom": "^16.13.1",
-    "react-redux": "^7.2.0",
-    "react-router-config": "^5.1.1",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "^4.0.3",
-    "react-toastify": "^7.0.4",
-    "react-typed": "^1.2.0",
-    "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-promise-middleware": "^6.1.2",
-    "redux-thunk": "^2.3.0",
-    "yup": "^0.28.3"
-  },
+  "type": "module",
   "scripts": {
-    "start": "babel-node app.js",
-    "dev": "react-scripts start",
-    "deploy": "rm -rf build && tar zxvf build.tar.gz",
-    "build-prod": "npm run build && npm run compress",
-    "compress": "tar zcvf build.tar.gz build/",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "cms": "npx decap-server"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@vitejs/plugin-react": "^6.1.2",
+    "eslint": "^10.12.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.13.0",
+    "vite": "^8.3.3"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.8",
+    "boxicons": "^2.1.4",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "typed.js": "^3.0.0"
   }
 }

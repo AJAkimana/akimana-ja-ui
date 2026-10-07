@@ -1,38 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# akimanaja.com
 
-## Available Scripts
+Personal portfolio of Jean d'Amour Akimanizanye. A static React site (Vite) hosted on Netlify, with
+a Git-based dashboard (Decap CMS) at `/admin`.
 
-In the project directory, you can run:
+## About me
 
-### `npm start`
+I'm a **Senior Backend / Full-Stack Engineer** based in Kigali, Rwanda, with about 10 years of
+experience designing, building, and scaling API-driven systems, SaaS platforms, and cloud-native
+applications.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Now:** Lead Software Engineer at Huza HR, leading backend and system architecture for an
+  enterprise HR SaaS platform (payroll, employee management, reporting).
+- **Before:** GitStart (Sourcegraph, Supabase, Strapi), Benipal Technologies, Andela (team lead),
+  and Data Systems Ltd.
+- **Core stack:** Python, TypeScript, Go, Node.js, Django, FastAPI, React, PostgreSQL, Redis, AWS,
+  Docker, Nginx.
+- **Strengths:** multi-tenant and distributed architectures, API design, cloud deployment, and
+  performance optimization. I've built production systems serving 10,000+ users, including a
+  multi-tenant internet radio platform that supports at least 1,000 concurrent listeners.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Find me on [LinkedIn](https://www.linkedin.com/in/ajakimana), [GitHub](https://github.com/AJAkimana)
+and [GitLab](https://gitlab.com/AJAkimana), or at [www.akimanaja.com](https://www.akimanaja.com).

@@ -1,0 +1,50 @@
+{
+  "displayName": "Akimana AJA",
+  "fullName": "Jean d'Amour Akimanizanye",
+  "titles": [
+    "Senior Backend Engineer",
+    "Full-Stack Engineer"
+  ],
+  "heroDescription": "Backend-focused engineer building API-driven systems, SaaS platforms and cloud-native applications that scale, from architecture through production.",
+  "avatar": "/assets/img/me.jpg",
+  "photo": "/assets/img/profile-img.jpg",
+  "cv": "/uploads/Jean_d_Amour_Akimanizanye_CV.pdf",
+  "intro": [
+    "Backend-focused Full-Stack Engineer with about 10 years of experience designing, building, and scaling API-driven systems, SaaS platforms, and cloud-native applications.",
+    "Strong expertise in Python, TypeScript, Node.js, React, AWS, PostgreSQL, Docker, and Nginx, with experience in distributed and multi-tenant architectures, API design, cloud deployment, and performance optimization."
+  ],
+  "aboutTitle": "Senior Backend / Full-Stack Engineer.",
+  "aboutText": [
+    "Known for writing clean, maintainable backend systems and delivering reliable solutions from architecture through production.",
+    "I have a proven track record of building reliable production systems supporting 10,000+ users, including a multi-tenant internet radio platform built with Go, Python/Django, React, and Nginx supporting at least 1,000 concurrent listeners."
+  ],
+  "website": "www.akimanaja.com",
+  "phoneNumber": "+250 783 543 016",
+  "email": "akimanaja17@gmail.com",
+  "city": "Kigali, Rwanda",
+  "address": "Kigali, KN 107 St",
+  "degree": "Bachelor of Computer Science",
+  "availability": "Available",
+  "socials": [
+    {
+      "name": "github",
+      "link": "https://github.com/AJAkimana"
+    },
+    {
+      "name": "gitlab",
+      "link": "https://gitlab.com/AJAkimana"
+    },
+    {
+      "name": "linkedin",
+      "link": "https://www.linkedin.com/in/ajakimana"
+    },
+    {
+      "name": "twitter",
+      "link": "https://twitter.com/AJAkimana"
+    },
+    {
+      "name": "stack-overflow",
+      "link": "https://stackoverflow.com/users/7079061/akimana-ajoully-jean-damour"
+    }
+  ]
+}

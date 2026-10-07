@@ -161,6 +161,7 @@ h6 {
   #header {
     left: -300px;
   }
+
   #main {
     margin-left: 0;
   }
@@ -180,7 +181,7 @@ h6 {
   list-style: none;
 }
 
-.nav-menu > ul > li {
+.nav-menu>ul>li {
   position: relative;
   white-space: nowrap;
 }
@@ -202,15 +203,15 @@ h6 {
 }
 
 .nav-menu a:hover,
-.nav-menu .active > a,
-.nav-menu li:hover > a {
+.nav-menu .active>a,
+.nav-menu li:hover>a {
   text-decoration: none;
   color: var(--color-heading);
 }
 
 .nav-menu a:hover i,
-.nav-menu .active > a i,
-.nav-menu li:hover > a i {
+.nav-menu .active>a i,
+.nav-menu li:hover>a i {
   color: var(--color-accent);
 }
 
@@ -337,9 +338,11 @@ h6 {
     font-size: 28px;
     line-height: 36px;
   }
+
   #hero .hero-title {
     font-size: 16px;
   }
+
   #hero .hero-description {
     font-size: 15px;
   }
@@ -591,7 +594,7 @@ section {
   background: rgba(1, 4, 9, 0.95);
 }
 
-.portfolio .portfolio-wrap .portfolio-links a + a {
+.portfolio .portfolio-wrap .portfolio-links a+a {
   border-left: 1px solid var(--color-accent-hover);
 }
 
@@ -790,10 +793,10 @@ section {
   margin-bottom: 12px;
 }
 
-.contact .info .email:hover > i,
-.contact .info .address:hover > i,
-.contact .info .phone:hover > i,
-.contact .info .follow:hover > i {
+.contact .info .email:hover>i,
+.contact .info .address:hover>i,
+.contact .info .phone:hover>i,
+.contact .info .follow:hover>i {
   background: var(--color-accent);
   color: var(--color-accent-contrast);
 }
@@ -879,6 +882,7 @@ section {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -888,6 +892,7 @@ section {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -927,7 +932,7 @@ section {
   }
 }
 
-.section-title p + p {
+.section-title p+p {
   margin-top: 10px;
 }
 
@@ -958,4 +963,8 @@ section {
 #header,
 #footer {
   border-right: 1px solid var(--color-surface-2);
+}
+
+.nl-badge {
+  display: none !important;
 }

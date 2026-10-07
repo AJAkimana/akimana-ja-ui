@@ -20,4 +20,4 @@ applications.
   multi-tenant internet radio platform that supports at least 1,000 concurrent listeners.
 
 Find me on [LinkedIn](https://www.linkedin.com/in/ajakimana), [GitHub](https://github.com/AJAkimana)
-and [GitLab](https://gitlab.com/AJAkimana), or at [www.akimanaja.com](https://www.akimanaja.com).
+and [GitLab](https://gitlab.com/AJAkimana), or at [akimanaja.com](https://akimanaja.com).

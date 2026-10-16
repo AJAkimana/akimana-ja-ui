@@ -1,10 +1,7 @@
 {
   "displayName": "Akimana AJA",
-  "fullName": "Jean d'Amour Akimanizanye",
-  "titles": [
-    "Senior Backend Engineer",
-    "Full-Stack Engineer"
-  ],
+  "fullName": "Jean d Amour",
+  "titles": ["Senior Backend Engineer", "Full-Stack Engineer"],
   "heroDescription": "Backend-focused engineer building API-driven systems, SaaS platforms and cloud-native applications that scale, from architecture through production.",
   "avatar": "/assets/img/me.jpg",
   "photo": "/assets/img/profile-img.jpg",
@@ -18,7 +15,7 @@
     "Known for writing clean, maintainable backend systems and delivering reliable solutions from architecture through production.",
     "I have a proven track record of building reliable production systems supporting 10,000+ users, including a multi-tenant internet radio platform built with Go, Python/Django, React, and Nginx supporting at least 1,000 concurrent listeners."
   ],
-  "website": "www.akimanaja.com",
+  "website": "https://akimanaja.com",
   "phoneNumber": "+250 783 543 016",
   "email": "akimanaja17@gmail.com",
   "city": "Kigali, Rwanda",
@@ -36,11 +33,7 @@
     },
     {
       "name": "linkedin",
-      "link": "https://www.linkedin.com/in/ajakimana"
-    },
-    {
-      "name": "twitter",
-      "link": "https://twitter.com/AJAkimana"
+      "link": "https://linkedin.com/in/ajakimana"
     },
     {
       "name": "stack-overflow",

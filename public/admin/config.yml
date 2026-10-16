@@ -1,9 +1,13 @@
 # Decap CMS dashboard, served at /admin.
-# Every "Publish" commits to the repo, which triggers a Netlify rebuild.
+# Every "Publish" commits to the repo; the GitHub Action then builds and deploys to the VPS.
 backend:
   name: github
   repo: AJAkimana/akimana-ja-ui
   branch: master
+  # GitHub login goes through Netlify's OAuth service using an empty, login-only
+  # Netlify site (see deploy/README.md). The site itself is hosted on the VPS.
+  base_url: https://api.netlify.com
+  site_domain: akimanaja-auth.netlify.app
 
 # `npm run cms` + `npm run dev` lets you edit locally without GitHub login.
 local_backend: true

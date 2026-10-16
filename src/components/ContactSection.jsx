@@ -8,15 +8,25 @@ const initialState = {
   message: "",
 };
 
-// Netlify Forms: the matching hidden form lives in index.html.
-const submitToNetlify = (values) =>
-  fetch("/", {
+// Web3Forms emails each submission to the address tied to this (public) access key.
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
+const sendMessage = async ({ names, email, subject, message }) => {
+  if (!WEB3FORMS_ACCESS_KEY) throw new Error("VITE_WEB3FORMS_ACCESS_KEY is not set");
+  const res = await fetch("https://api.web3forms.com/submit", {
     method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({ "form-name": "contact", ...values }).toString(),
-  }).then((res) => {
-    if (!res.ok) throw new Error(`Form submission failed (${res.status})`);
+    headers: { "Content-Type": "application/json", Accept: "application/json" },
+    body: JSON.stringify({
+      access_key: WEB3FORMS_ACCESS_KEY,
+      from_name: "akimanaja.com contact form",
+      subject: `[akimanaja.com] ${subject}`,
+      name: names,
+      email,
+      message,
+    }),
   });
+  if (!res.ok) throw new Error(`Form submission failed (${res.status})`);
+};
 
 export const ContactSection = ({ profile }) => {
   const [messageBody, setMessageBody] = useState(initialState);
@@ -31,10 +41,7 @@ export const ContactSection = ({ profile }) => {
     e.preventDefault();
     setStatus("sending");
     try {
-      await submitToNetlify({
-        ...messageBody,
-        "bot-field": e.target.elements["bot-field"].value,
-      });
+      await sendMessage(messageBody);
       setMessageBody(initialState);
       setStatus("sent");
     } catch {
@@ -99,11 +106,6 @@ export const ContactSection = ({ profile }) => {
 
           <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
             <form className="contact-form" name="contact" onSubmit={onSubmit}>
-              <p hidden>
-                <label>
-                  Don't fill this out: <input name="bot-field" />
-                </label>
-              </p>
               <div className="row">
                 <div className="form-group col-md-6">
                   <label htmlFor="contact-names">Your Name</label>

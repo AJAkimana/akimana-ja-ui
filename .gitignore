@@ -8,6 +8,5 @@
 .DS_Store
 .env
 .env.local
-.netlify
 
 npm-debug.log*

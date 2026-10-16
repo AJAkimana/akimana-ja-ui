@@ -1,7 +1,7 @@
 # akimanaja.com
 
-Personal portfolio of Jean d'Amour Akimanizanye. A static React site (Vite) hosted on Netlify, with
-a Git-based dashboard (Decap CMS) at `/admin`.
+Personal portfolio of Jean d'Amour Akimanizanye. A static React site (Vite) served by nginx, with a
+Git-based dashboard (Decap CMS) at `/admin`. Deployment and setup: [deploy/README.md](deploy/README.md).
 
 ## About me
 

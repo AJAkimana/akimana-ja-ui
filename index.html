@@ -33,15 +33,6 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 
-    <!-- Lets Netlify detect the contact form at deploy time; the React form posts to it. -->
-    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-      <input type="text" name="names" />
-      <input type="email" name="email" />
-      <input type="text" name="subject" />
-      <textarea name="message"></textarea>
-      <input name="bot-field" />
-    </form>
-
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

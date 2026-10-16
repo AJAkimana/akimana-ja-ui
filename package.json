@@ -8,7 +8,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "cms": "npx decap-server"
+    "cms": "npx decap-server",
+    "deploy": "rm -rf build && tar zxvf build.tar.gz",
+    "build-prod": "npm run build && npm run compress",
+    "compress": "tar zcvf build.tar.gz build/"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

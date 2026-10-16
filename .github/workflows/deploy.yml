@@ -1,56 +1,60 @@
-name: My Profile CI/CD
-# Controls when the workflow will run
+name: Deploy to VPS
+
+# Runs on every push to master, including commits made from the /admin dashboard.
 on:
-  # Triggers the workflow on push events but only for the develop branch
   push:
     branches: [master]
+  workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# Never run two deploys at once; a newer push waits for the current one to finish.
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
 jobs:
-  build:
-    # The type of runner that the job will run on
+  deploy:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.17.0]
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      # Runs a single command using the runners shell
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@master
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: Install packages and run build the app
+          node-version: 22
+          cache: npm
+
+      - name: Install, lint and build
         run: |
-          npm install
+          npm ci
+          npm run lint
           npm run build-prod
-      - uses: appleboy/scp-action@master
+        env:
+          # Public Web3Forms key for the contact form (repository variable, not a secret).
+          VITE_WEB3FORMS_ACCESS_KEY: ${{ vars.WEB3FORMS_ACCESS_KEY }}
+
+      - name: Upload the build to the VPS
+        uses: appleboy/scp-action@v1.0.0
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
-          source: "build.tar.gz"
-          target: "~/profile"
+          source: build.tar.gz
+          target: ~/profile
 
-  deploy:
-    needs: [build]
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Prepare SSH and deploy the app
-        uses: appleboy/ssh-action@master
+      # nginx serves ~/profile/dist; swap it in one move so visitors never see a half-copied site.
+      - name: Swap in the new build
+        uses: appleboy/ssh-action@v1.2.5
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
+            set -e
             cd ~/profile
-            git pull origin master
-            npm install
-            npm run deploy
-            echo "Restart the server"
-            pm2 restart 1
+            rm -rf release dist.old
+            mkdir release
+            tar zxf build.tar.gz -C release
+            if [ -d dist ]; then mv dist dist.old; fi
+            mv release/dist dist
+            rm -rf release build.tar.gz
+            echo "Deployed $(date)"
